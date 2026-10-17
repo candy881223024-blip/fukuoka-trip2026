@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>2026 九州親子自由行手冊 (8天7夜)</title>
+  <title>2026 九州親子自由行手冊 (8天7夜精簡順行優化版)</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -46,11 +46,13 @@
   <style>
     body {
       font-family: 'Noto Sans TC', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
       -webkit-tap-highlight-color: transparent;
     }
     .custom-scrollbar::-webkit-scrollbar {
-      height: 3px;
-      width: 3px;
+      height: 4px;
+      width: 4px;
     }
     .custom-scrollbar::-webkit-scrollbar-thumb {
       background-color: rgba(156, 163, 175, 0.4);
@@ -67,7 +69,7 @@
       content: '';
       position: absolute;
       left: 50%;
-      top: 30px;
+      top: 40px;
       bottom: -16px;
       width: 2px;
       background-color: #e2e8f0;
@@ -83,69 +85,70 @@
       box-shadow: 0 4px 14px rgba(224, 83, 83, 0.35);
     }
     .safe-area-bottom {
-      padding-bottom: max(16px, env(safe-area-inset-bottom, 16px));
+      padding-bottom: max(18px, env(safe-area-inset-bottom, 18px));
     }
   </style>
 </head>
 
-<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-rose-200">
+<body class="bg-slate-100 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-rose-200 text-base">
 
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs">
-    <div class="max-w-4xl mx-auto px-4 py-2.5 flex items-center justify-between">
-      <div class="flex items-center space-x-2.5">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-brand-600 to-rose-400 flex items-center justify-center text-white shadow-md shadow-brand-500/25">
-          <i class="fa-solid fa-map-location-dot text-lg"></i>
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-600 to-rose-400 flex items-center justify-center text-white shadow-md shadow-brand-500/25">
+          <i class="fa-solid fa-map-location-dot text-xl"></i>
         </div>
         <div>
-          <div class="flex items-center space-x-1.5">
-            <h1 class="text-base font-bold text-slate-900 leading-tight">2026 九州親子遊</h1>
-            <span class="text-[10px] bg-rose-100 text-rose-700 px-1.5 py-0.5 rounded font-bold">8天7夜</span>
+          <div class="flex items-center space-x-2">
+            <h1 class="text-lg font-bold text-slate-900 leading-tight">2026 九州親子遊</h1>
+            <span class="text-xs bg-rose-100 text-rose-700 px-2 py-0.5 rounded-md font-bold">8天7夜精簡順行版</span>
           </div>
-          <p class="text-xs text-slate-500 font-medium">3大1幼 (2Y10M) · 11/14 - 11/21</p>
+          <p class="text-sm text-slate-500 font-medium mt-0.5">3大1幼 (2Y10M) · 11/14 - 11/21</p>
         </div>
       </div>
 
       <!-- Quick Action Buttons -->
-      <div class="flex items-center space-x-1.5">
-        <button onclick="toggleCurrencyModal(true)" class="px-2.5 py-1.5 rounded-xl border border-slate-200 bg-white text-xs font-semibold text-slate-700 hover:bg-slate-50 flex items-center space-x-1.5 shadow-xs transition active:scale-95">
-          <i class="fa-solid fa-yen-sign text-emerald-600"></i>
+      <div class="flex items-center space-x-2">
+        <button onclick="toggleCurrencyModal(true)" class="px-3 py-2 rounded-xl border border-slate-200 bg-white text-sm font-semibold text-slate-700 hover:bg-slate-50 flex items-center space-x-1.5 shadow-xs transition active:scale-95">
+          <i class="fa-solid fa-yen-sign text-emerald-600 text-base"></i>
           <span>匯率換算</span>
         </button>
       </div>
     </div>
 
     <!-- Quick Info Pill Strip (Hotel, Pass, Flights) -->
-    <div class="bg-slate-50/90 border-t border-slate-100 px-4 py-1.5 text-xs text-slate-600">
-      <div class="max-w-4xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar whitespace-nowrap gap-4">
+    <div class="bg-slate-50 border-t border-slate-100 px-4 py-2 text-xs sm:text-sm text-slate-600">
+      <div class="max-w-4xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar whitespace-nowrap gap-5">
         <span class="inline-flex items-center text-slate-700 font-medium">
-          <i class="fa-solid fa-hotel text-amber-500 mr-1.5"></i>
+          <i class="fa-solid fa-hotel text-amber-500 mr-1.5 text-sm"></i>
           7晚定點：<strong class="text-slate-800 ml-1">GRAND BASE Hakataminami</strong>
         </span>
         <span class="inline-flex items-center text-jrpass font-medium">
-          <i class="fa-solid fa-train-subway mr-1.5"></i>
+          <i class="fa-solid fa-train-subway mr-1.5 text-sm"></i>
           JR 北九州 3 日券 (Day 3-5)
         </span>
         <span class="inline-flex items-center text-blue-600 font-medium">
-          <i class="fa-solid fa-plane-departure mr-1.5"></i>
+          <i class="fa-solid fa-plane-departure mr-1.5 text-sm"></i>
           華航 CI116 / CI117
         </span>
         <span class="inline-flex items-center text-baby-600 font-medium">
-          <i class="fa-solid fa-baby-carriage mr-1.5"></i>
-          推車全程友善 · 精簡順行版
+          <i class="fa-solid fa-baby-carriage mr-1.5 text-sm"></i>
+          推車全程友善 · 順行無回頭路
         </span>
       </div>
     </div>
 
+    <!-- Unified Day Buttons Format -->
     <div id="daysNavBar" class="bg-white border-b border-slate-200 shadow-xs py-2 px-3">
-      <div class="max-w-4xl mx-auto flex items-center space-x-2 overflow-x-auto no-scrollbar py-0.5">
-        <button onclick="selectDay(1)" id="dayBtn-1" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day1 (11/14 六)</button>
-        <button onclick="selectDay(2)" id="dayBtn-2" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day2 (11/15 日)</button>
-        <button onclick="selectDay(3)" id="dayBtn-3" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day3 (11/16 一)</button>
-        <button onclick="selectDay(4)" id="dayBtn-4" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day4 (11/17 二)</button>
-        <button onclick="selectDay(5)" id="dayBtn-5" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day5 (11/18 三)</button>
-        <button onclick="selectDay(6)" id="dayBtn-6" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day6 (11/19 四)</button>
-        <button onclick="selectDay(7)" id="dayBtn-7" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day7 (11/20 五)</button>
-        <button onclick="selectDay(8)" id="dayBtn-8" class="day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day8 (11/21 六)</button>
+      <div class="max-w-4xl mx-auto flex items-center space-x-2.5 overflow-x-auto no-scrollbar py-0.5">
+        <button onclick="selectDay(1)" id="dayBtn-1" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day1 (11/14 六)</button>
+        <button onclick="selectDay(2)" id="dayBtn-2" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day2 (11/15 日)</button>
+        <button onclick="selectDay(3)" id="dayBtn-3" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day3 (11/16 一)</button>
+        <button onclick="selectDay(4)" id="dayBtn-4" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day4 (11/17 二)</button>
+        <button onclick="selectDay(5)" id="dayBtn-5" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day5 (11/18 三)</button>
+        <button onclick="selectDay(6)" id="dayBtn-6" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day6 (11/19 四)</button>
+        <button onclick="selectDay(7)" id="dayBtn-7" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day7 (11/20 五)</button>
+        <button onclick="selectDay(8)" id="dayBtn-8" class="day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap">Day8 (11/21 六)</button>
       </div>
     </div>
   </header>
@@ -156,139 +159,135 @@
     <div id="sectionItinerary" class="space-y-4">
       
       <!-- Day Summary Card -->
-      <div id="daySummaryCard" class="bg-gradient-to-br from-white to-slate-50 rounded-2xl p-4 shadow-sm border border-slate-200/90 relative overflow-hidden transition-all duration-300">
+      <div id="daySummaryCard" class="bg-gradient-to-br from-white to-slate-50 rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200/90 relative overflow-hidden transition-all duration-300">
         <!-- Dynamically rendered via JS -->
       </div>
 
       <!-- Timeline Activities List -->
-      <div id="timelineContainer" class="space-y-3 relative mt-2">
-        <!-- Dynamically rendered via JS -->
+      <div id="timelineContainer" class="space-y-3.5 relative mt-2">
+        <!-- Dynamically rendered via JS with enlarged text -->
       </div>
 
       <!-- Custom Note & Meal Planning Section -->
-      <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200 mt-6">
-        <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center space-x-2">
-            <i class="fa-solid fa-pen-nib text-brand-600"></i>
-            <h3 class="text-sm font-bold text-slate-800">當日行程備忘 / 餐飲自訂清單</h3>
+      <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200 mt-6">
+        <div class="flex items-center justify-between mb-2.5">
+          <div class="flex items-center space-x-2.5">
+            <i class="fa-solid fa-pen-nib text-brand-600 text-base"></i>
+            <h3 class="text-base font-bold text-slate-800">當日行程備忘 / 餐飲自訂清單</h3>
           </div>
-          <span class="text-[10px] text-slate-400">手機端自動儲存</span>
+          <span class="text-xs text-slate-400 font-medium">手機端自動儲存</span>
         </div>
-        <p class="text-xs text-slate-500 mb-2">遇有 [待補充] 餐飲或自選餐廳，可直接填寫於下方並點擊儲存：</p>
-        <textarea id="dailyUserNote" rows="3" placeholder="例如：早餐外帶超商飯糰、晚餐改選一蘭或博多牛腸鍋、記下博多站 Coin Locker 置物櫃編號..." class="w-full text-xs p-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/30 text-slate-700 resize-none bg-slate-50/50"></textarea>
-        <div class="flex justify-between items-center mt-2.5">
-          <span id="noteSavedStatus" class="text-[11px] text-emerald-600 font-medium opacity-0 transition-opacity">已自動保存</span>
-          <button onclick="saveDailyNote()" class="px-3.5 py-1.5 bg-slate-900 hover:bg-black text-white rounded-xl text-xs font-semibold flex items-center space-x-1.5 shadow-sm transition active:scale-95">
-            <i class="fa-solid fa-check text-[11px]"></i>
+        <p class="text-sm text-slate-500 mb-2.5">遇有 [ 待補充 ] 餐飲或自選餐廳，可直接填寫於下方並點擊儲存：</p>
+        <textarea id="dailyUserNote" rows="3" placeholder="例如：早餐外帶超商飯糰、午餐選定釜飯心、博多站 Coin Locker 置物櫃記下位置與密碼..." class="w-full text-sm p-3.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-500/30 text-slate-800 resize-none bg-slate-50/50 leading-relaxed"></textarea>
+        <div class="flex justify-between items-center mt-3">
+          <span id="noteSavedStatus" class="text-xs text-emerald-600 font-semibold opacity-0 transition-opacity">已自動保存筆記</span>
+          <button onclick="saveDailyNote()" class="px-4 py-2 bg-slate-900 hover:bg-black text-white rounded-xl text-sm font-semibold flex items-center space-x-2 shadow-sm transition active:scale-95">
+            <i class="fa-solid fa-check text-xs"></i>
             <span>儲存筆記</span>
           </button>
         </div>
       </div>
     </div>
 
+    <!-- TAB 2: PREP VIEW -->
     <div id="sectionPrep" class="hidden space-y-4">
       
-      <div class="bg-gradient-to-r from-rose-50 via-orange-50 to-amber-50 border border-rose-200 rounded-2xl p-4 shadow-sm">
-        <div class="flex items-start space-x-3">
-          <div class="w-10 h-10 rounded-xl bg-brand-500 text-white flex items-center justify-center flex-shrink-0 shadow-sm">
-            <i class="fa-solid fa-bell text-lg"></i>
+      <div class="bg-gradient-to-r from-rose-50 via-orange-50 to-amber-50 border border-rose-200 rounded-2xl p-4 sm:p-5 shadow-sm">
+        <div class="flex items-start space-x-3.5">
+          <div class="w-11 h-11 rounded-xl bg-brand-500 text-white flex items-center justify-center flex-shrink-0 shadow-sm">
+            <i class="fa-solid fa-bell text-xl"></i>
           </div>
           <div>
-            <h2 class="text-base font-bold text-slate-800">搶票、預約與行前待辦時程</h2>
-            <p class="text-xs text-slate-600 mt-0.5">由布院之森、COMICO 美術館、SHOEI 旗艦店與 VJW 申報</p>
+            <h2 class="text-lg font-bold text-slate-900 leading-tight">搶票、預約與行前待辦時程</h2>
+            <p class="text-sm text-slate-600 mt-1">由布院之森 (Day 4)、SHOEI 旗艦店 (Day 8)、麵包超人與 VJW 申報完整攻略</p>
           </div>
         </div>
       </div>
 
       <!-- Critical Timeline Cards -->
-      <div class="space-y-3">
+      <div class="space-y-4">
         
         <!-- Yufuin no Mori Ticket -->
-        <div class="bg-white rounded-2xl p-4 border border-rose-300 shadow-sm relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-brand-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider">
-            最高優先級
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-rose-300 shadow-sm relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-brand-600 text-white text-xs font-bold px-3 py-1.5 rounded-bl-xl uppercase tracking-wider">
+            最高優先級 (乘車前30天)
           </div>
-          <div class="flex items-start space-x-3">
-            <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
-              <i class="fa-solid fa-train"></i>
+          <div class="flex items-start space-x-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0 mt-0.5 font-bold">
+              <i class="fa-solid fa-train text-lg"></i>
             </div>
             <div class="pr-12">
-              <h3 class="text-sm font-bold text-slate-800">由布院之森 全車指定席搶票 ＆ 限定便當</h3>
-              <div class="inline-block bg-rose-50 border border-rose-200 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-md mt-1">
-                搶票日：2026/10/17 09:00（台灣時間準時開搶）
+              <h3 class="text-base font-bold text-slate-900">由布院之森 全車指定席搶票 ＆ 限定便當</h3>
+              <div class="inline-block bg-rose-50 border border-rose-200 text-rose-700 text-xs sm:text-sm font-bold px-2.5 py-1 rounded-md mt-1.5">
+                搶票日：2026/10/18 09:00（台灣時間準時開搶）
               </div>
-              <div class="text-xs text-slate-600 space-y-1.5 mt-2 bg-slate-50 p-3 rounded-xl border border-slate-100">
+              <div class="text-sm text-slate-700 space-y-2 mt-3 bg-slate-50 p-3.5 rounded-xl border border-slate-100 leading-relaxed">
                 <p>• <strong>開賣規則：</strong>乘車日前 30 天上午 10:00（日本時間 / 台灣 09:00）開放預訂。</p>
-                <p>• <strong>目標班次：</strong>Day 3 (11/16) 去程 1 號 (09:17 發車) 與回程 6 號 (17:17 發車)。</p>
+                <p>• <strong>目標班次：</strong>Day 4 (11/17 二) 去程 1 號 (09:17 發車) 與回程 6 號 (17:17 發車)。</p>
                 <p>• <strong>費用：</strong>全車無自由席，持北九州周遊券需於 JR 官方預約系統劃位，每位大人劃位手續費 1,000 日圓。</p>
-                <p>• <strong>限定便當預約：</strong>若想在列車上品嚐人氣限定便當（由布院之森便當、折鶴便當），劃位後請同步於 JR 官網提前預訂。</p>
+                <p>• <strong>限定便當預約（回程 6 號享用）：</strong>劃位後同步於官網系統提前預訂回程（由布院之森 6 號）之超人氣限定便當（如由布院之森便當、折鶴便當），上車後於 3 號車廂領取當晚點心！</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Reservations: COMICO & SHOEI -->
-        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-          <div class="flex items-start space-x-3">
-            <div class="w-9 h-9 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <i class="fa-solid fa-calendar-check"></i>
+        <!-- Reservations: SHOEI & Ishihara Beef -->
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-calendar-check text-lg"></i>
             </div>
             <div class="w-full">
-              <h3 class="text-sm font-bold text-slate-800">重點景點與專門店預約（出發前 1 個月）</h3>
-              <div class="space-y-2 mt-2 text-xs">
-                <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+              <h3 class="text-base font-bold text-slate-900">重點專門店與餐廳預約（出發前 1 個月）</h3>
+              <div class="space-y-2.5 mt-3 text-sm">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <div class="flex items-center justify-between">
-                    <span class="font-bold text-indigo-700">🎨 COMICO ART MUSEUM YUFUIN (Day 3)</span>
-                    <span class="text-[10px] bg-indigo-100 text-indigo-800 px-1.5 py-0.5 rounded">出發前 1 個月</span>
+                    <span class="font-bold text-slate-800">🪖 SHOEI Gallery FUKUOKA (Day 8 上午)</span>
+                    <span class="text-xs bg-slate-200 text-slate-800 px-2 py-0.5 rounded font-medium">出發前 1 個月</span>
                   </div>
-                  <p class="text-slate-600 mt-1">官網預訂 11/16 (一) 14:00 入場梯次，線上特惠 1,500 日圓/大人，幼童免費。隈研吾黑杉木建築、奈良美智「Your Dog」與草間彌生名作。</p>
+                  <p class="text-slate-600 mt-1.5 leading-relaxed">至 mySHOEI 官方網站預約 11/21 (六) 10:00 首批入場與 PFS 個人化內襯測量時段。買完直接搭計程車回博多站寄放大置物櫃解放雙手！</p>
                 </div>
-                <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
-                  <div class="flex items-center justify-between">
-                    <span class="font-bold text-slate-800">🪖 SHOEI Gallery FUKUOKA (Day 8)</span>
-                    <span class="text-[10px] bg-slate-200 text-slate-800 px-1.5 py-0.5 rounded">出發前 1 個月</span>
-                  </div>
-                  <p class="text-slate-600 mt-1">至 mySHOEI 官網預約 11/21 (六) 10:00 首批入場與 PFS 個人化內襯測量時段。買完直接放博多站置物櫃解放雙手！</p>
-                </div>
-                <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+                <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <div class="flex items-center justify-between">
                     <span class="font-bold text-amber-700">🥩 焼肉処 石原牛 (Day 2 午餐)</span>
-                    <span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">出發前 1 個月</span>
+                    <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium">出發前 1 個月</span>
                   </div>
-                  <p class="text-slate-600 mt-1">Tabelog 或官網預約獨立包廂，備註 3 大 1 幼同行與推車，玩完麵包超人搭電梯直達 1F 開吃。</p>
+                  <p class="text-slate-600 mt-1.5 leading-relaxed">Tabelog 或官網預約獨立包廂，備註 3 大 1 幼同行與推車，玩完麵包超人搭電梯直達 1F 開吃。</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Pass & Smart Checklist -->
-        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-          <div class="flex items-start space-x-3">
-            <div class="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-              <i class="fa-solid fa-ticket"></i>
+        <!-- Pass & Green Window Ticket Checklist -->
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-ticket text-lg"></i>
             </div>
             <div>
-              <h3 class="text-sm font-bold text-slate-800">JR 九州鐵路周遊券（北九州 3 日券）</h3>
-              <p class="text-xs text-slate-500 mt-0.5">出發前 1～3 個月購買電子憑證 (MCO)</p>
-              <div class="text-xs text-slate-600 space-y-1 mt-2 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-                <p>• <strong>連續 3 天：</strong>Day 3 (11/16)、Day 4 (11/17)、Day 5 (11/18)。</p>
-                <p>• <strong>首夜博多站一次劃齊：</strong>Day 1 抵達當晚 21:40 前在博多站綠色窗口領取實體票，並直接將 Day 3 由布院之森、Day 4 Sonic (08:23 / 19:12) 與 Day 5 新幹線 (08:49 / 18:05) 實體車票一次領齊。</p>
+              <h3 class="text-base font-bold text-slate-900">JR 九州鐵路周遊券（北九州 3 日券）換票劃位</h3>
+              <p class="text-sm text-slate-500 mt-0.5">連續使用於 Day 3 (11/16)、Day 4 (11/17)、Day 5 (11/18)</p>
+              <div class="text-sm text-slate-700 space-y-1.5 mt-2.5 bg-slate-50 p-3 rounded-xl border border-slate-100 leading-relaxed">
+                <p>• <strong>首夜博多站一次劃齊：</strong>Day 1 抵達當晚 21:05 前往博多站綠色窗口（みどりの窓口，營業至 22:00），憑護照與憑證兌換實體票並一次領齊後續指定席：</p>
+                <p class="pl-2">1. <strong>Day 3 (11/16 一)：</strong>特急 Sonic 7 號 (博多 08:23 ➔ 小倉 09:05) 與回程 Sonic 號 (小倉 19:12 ➔ 博多 19:59)。</p>
+                <p class="pl-2">2. <strong>Day 4 (11/17 二)：</strong>領取已線上預約之「由布院之森 1 號 (09:17)」與「由布院之森 6 號 (17:17)」。</p>
+                <p class="pl-2">3. <strong>Day 5 (11/18 三)：</strong>九州新幹線 (博多 08:49 ➔ 熊本 09:27) 與回程 (熊本 18:05 ➔ 博多 18:45)。</p>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Interactive Packing & Preparation Checklist -->
-        <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm">
-          <div class="flex items-center justify-between mb-3">
-            <span class="flex items-center space-x-2">
-              <i class="fa-solid fa-clipboard-check text-baby-600"></i>
-              <span class="text-sm font-bold text-slate-800">出發前 3～7 天清點 ＆ 親子行李檢核</span>
+        <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm">
+          <div class="flex items-center justify-between mb-3.5">
+            <span class="flex items-center space-x-2.5">
+              <i class="fa-solid fa-clipboard-check text-baby-600 text-lg"></i>
+              <span class="text-base font-bold text-slate-900">出發前 3～7 天清點 ＆ 親子行李檢核</span>
             </span>
-            <span id="packProgress" class="text-xs text-baby-600 font-bold font-outfit bg-baby-50 px-2 py-0.5 rounded-full">0 / 12 完成</span>
+            <span id="packProgress" class="text-xs sm:text-sm text-baby-600 font-bold font-outfit bg-baby-50 px-2.5 py-1 rounded-full">0 / 12 完成</span>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs" id="packChecklist">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm" id="packChecklist">
             <!-- Dynamically populated checklist -->
           </div>
         </div>
@@ -296,128 +295,129 @@
       </div>
     </div>
 
+    <!-- TAB 3: HIGHLIGHTS & DINING JAPANESE PHRASES -->
     <div id="sectionHighlights" class="hidden space-y-4">
       
-      <!-- Toddler Dining Japanese Phrases -->
-      <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
-        <h2 class="text-sm font-bold text-slate-800 mb-2 flex items-center space-x-2">
-          <i class="fa-solid fa-language text-baby-600"></i>
+      <!-- Toddler Dining Japanese Phrases (Enlarged) -->
+      <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200">
+        <h2 class="text-base font-bold text-slate-900 mb-2 flex items-center space-x-2.5">
+          <i class="fa-solid fa-language text-baby-600 text-lg"></i>
           <span>日本用餐必備：親子實用語指給店員看</span>
         </h2>
-        <p class="text-xs text-slate-500 mb-3">點選卡片可直接出示給日本服務生，或一鍵複製日文：</p>
+        <p class="text-sm text-slate-500 mb-3.5 leading-relaxed">點選卡片可直接出示給日本服務生，或一鍵複製日文：</p>
         
-        <div class="space-y-2">
-          <div onclick="copyText('子供用のイスはありますか？')" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
+        <div class="space-y-2.5">
+          <div onclick="copyText('子供用のイスはありますか？')" class="p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-bold text-slate-800">子供用のイスはありますか？</span>
-              <span class="text-[10px] text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
+              <span class="text-sm font-bold text-slate-900">子供用のイスはありますか？</span>
+              <span class="text-xs text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
             </div>
-            <p class="text-[11px] text-slate-500 mt-0.5">Kodomo-yō no isu wa arimasu ka?（請問有兒童座椅嗎？）</p>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Kodomo-yō no isu wa arimasu ka?（請問有兒童座椅嗎？）</p>
           </div>
 
-          <div onclick="copyText('子供用のお皿とフォークをお願いします。')" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
+          <div onclick="copyText('子供用のお皿とフォークをお願いします。')" class="p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-bold text-slate-800">子供用のお皿とフォークをお願いします。</span>
-              <span class="text-[10px] text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
+              <span class="text-sm font-bold text-slate-900">子供用のお皿とフォークをお願いします。</span>
+              <span class="text-xs text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
             </div>
-            <p class="text-[11px] text-slate-500 mt-0.5">Kodomo-yō no osara to fōku o onegaishimasu.（請給我兒童餐具與叉子）</p>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Kodomo-yō no osara to fōku o onegaishimasu.（請給我兒童餐具與叉子）</p>
           </div>
 
-          <div onclick="copyText('わさび・コショウ・辛いものは抜いてください。')" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
+          <div onclick="copyText('わさび・コショウ・辛いものは抜いてください。')" class="p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-bold text-rose-700">わさび・コショウ・辛いものは抜いてください。</span>
-              <span class="text-[10px] text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
+              <span class="text-sm font-bold text-rose-700">わさび・コショウ・辛いものは抜いてください。</span>
+              <span class="text-xs text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
             </div>
-            <p class="text-[11px] text-slate-500 mt-0.5">Wasabi, koshō, karai mono wa nuite kudasai.（請不要加芥末、胡椒和辛辣調料）</p>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Wasabi, koshō, karai mono wa nuite kudasai.（請不要加芥末、胡椒和辛辣調料）</p>
           </div>
 
-          <div onclick="copyText('ぬるま湯（またはお湯）をいただけますか？')" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
+          <div onclick="copyText('ぬるま湯（またはお湯）をいただけますか？')" class="p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-bold text-slate-800">ぬるま湯（またはお湯）をいただけますか？</span>
-              <span class="text-[10px] text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
+              <span class="text-sm font-bold text-slate-900">ぬるま湯（またはお湯）をいただけますか？</span>
+              <span class="text-xs text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
             </div>
-            <p class="text-[11px] text-slate-500 mt-0.5">Nurumayu (matawa oyu) o itadakemasu ka?（可以提供溫開水或熱水嗎？）</p>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Nurumayu (matawa oyu) o itadakemasu ka?（可以提供溫開水或熱水嗎？）</p>
           </div>
 
-          <div onclick="copyText('ベビーカーのまま入店できますか？')" class="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
+          <div onclick="copyText('ベビーカーのまま入店できますか？')" class="p-3.5 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl cursor-pointer transition active:scale-[0.99]">
             <div class="flex justify-between items-center">
-              <span class="text-xs font-bold text-slate-800">ベビーカーのまま入店できますか？</span>
-              <span class="text-[10px] text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
+              <span class="text-sm font-bold text-slate-900">ベビーカーのまま入店できますか？</span>
+              <span class="text-xs text-slate-400"><i class="fa-regular fa-copy mr-1"></i>複製</span>
             </div>
-            <p class="text-[11px] text-slate-500 mt-0.5">Bebīkā no mama nyūten dekimasu ka?（嬰兒推車可以直接推進去嗎？）</p>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">Bebīkā no mama nyūten dekimasu ka?（嬰兒推車可以直接推進去嗎？）</p>
           </div>
         </div>
       </div>
 
       <!-- Key Gourmet Guide -->
-      <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200">
-        <h2 class="text-sm font-bold text-slate-800 mb-3 flex items-center space-x-2">
-          <i class="fa-solid fa-utensils text-brand-600"></i>
+      <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200">
+        <h2 class="text-base font-bold text-slate-900 mb-3 flex items-center space-x-2.5">
+          <i class="fa-solid fa-utensils text-brand-600 text-lg"></i>
           <span>行程特色排隊名店與現場備案</span>
         </h2>
         <div class="space-y-3">
-          <div class="p-3 bg-amber-50/80 border border-amber-200 rounded-xl text-xs space-y-1">
+          <div class="p-3.5 bg-amber-50/80 border border-amber-200 rounded-xl text-sm space-y-1.5">
             <div class="font-bold text-amber-950 flex items-center justify-between">
               <span>il FORNO del MIGNON 迷你可頌 (Day 1)</span>
-              <span class="text-[10px] bg-amber-200 text-amber-900 px-2 py-0.5 rounded-md font-medium">博多車站內</span>
+              <span class="text-xs bg-amber-200 text-amber-900 px-2 py-0.5 rounded-md font-medium">博多車站內</span>
             </div>
-            <p class="text-slate-600">現烤秤重販售（原味/巧克力/明太子/地瓜）。營業至 23:00，第一晚抵達即可採買當宵夜或隔日點心。</p>
+            <p class="text-slate-700 leading-relaxed">現烤秤重販售（原味/巧克力/明太子/地瓜）。營業至 23:00，第一晚抵達即可採買當宵夜或隔日點心。</p>
           </div>
 
-          <div class="p-3 bg-rose-50/80 border border-rose-200 rounded-xl text-xs space-y-1">
+          <div class="p-3.5 bg-rose-50/80 border border-rose-200 rounded-xl text-sm space-y-1.5">
             <div class="font-bold text-rose-950 flex items-center justify-between">
               <span>焼肉処 石原牛 (Day 2 午餐)</span>
-              <span class="text-[10px] bg-rose-200 text-rose-900 px-2 py-0.5 rounded-md font-medium">Riverain 1F</span>
+              <span class="text-xs bg-rose-200 text-rose-900 px-2 py-0.5 rounded-md font-medium">Riverain 1F</span>
             </div>
-            <p class="text-slate-600">A5 牧場直送頂級黑毛和牛！有舒適包廂，麵包超人玩完搭電梯下樓直達，高 CP 值商業午餐推薦。</p>
+            <p class="text-slate-700 leading-relaxed">A5 牧場直送頂級黑毛和牛！有舒適包廂，麵包超人玩完搭電梯下樓直達，高 CP 值商業午餐推薦。</p>
           </div>
 
-          <div class="p-3 bg-emerald-50/80 border border-emerald-200 rounded-xl text-xs space-y-1">
-            <div class="font-bold text-emerald-950 flex items-center justify-between">
-              <span>パン屋のぺったん 萌系手作動物麵包 (Day 3)</span>
-              <span class="text-[10px] bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded-md font-medium">冷泉町</span>
-            </div>
-            <p class="text-slate-600">07:00 開門即搶！小熊、刺蝟、博多面具造型麵包，適合帶上由布院之森火車安撫幼童。</p>
-          </div>
-
-          <div class="p-3 bg-blue-50/80 border border-blue-200 rounded-xl text-xs space-y-1">
+          <div class="p-3.5 bg-blue-50/80 border border-blue-200 rounded-xl text-sm space-y-1.5">
             <div class="font-bold text-blue-950 flex items-center justify-between">
-              <span>資さんうどん 魚町店 (Day 4 晚餐)</span>
-              <span class="text-[10px] bg-blue-200 text-blue-900 px-2 py-0.5 rounded-md font-medium">小倉 24小時</span>
+              <span>資さんうどん 魚町店 (Day 3 晚餐)</span>
+              <span class="text-xs bg-blue-200 text-blue-900 px-2 py-0.5 rounded-md font-medium">小倉 24小時</span>
             </div>
-            <p class="text-slate-600">肉牛蒡天婦羅烏龍麵、黑輪牛筋與白蘿蔔、牡丹餅。麵條軟嫩有兒童餐具，餵食幼童超放心。</p>
+            <p class="text-slate-700 leading-relaxed">肉牛蒡天婦羅烏龍麵、黑輪牛筋與白蘿蔔、牡丹餅。麵條軟嫩有兒童餐具，餵食幼童超放心。</p>
           </div>
 
-          <div class="p-3 bg-purple-50/80 border border-purple-200 rounded-xl text-xs space-y-1">
+          <div class="p-3.5 bg-yellow-50/80 border border-yellow-200 rounded-xl text-sm space-y-1.5">
+            <div class="font-bold text-yellow-950 flex items-center justify-between">
+              <span>治一郎 博多 DEITOS 店 (Day 3 甜點)</span>
+              <span class="text-xs bg-yellow-200 text-yellow-900 px-2 py-0.5 rounded-md font-medium">絲滑布丁</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">位於博多站 1F いっぴん通り。小倉返抵博多後順路外帶！純鮮奶油與蛋黃慢烤極致絲滑布丁，附焦糖液，回飯店極品宵夜。</p>
+          </div>
+
+          <div class="p-3.5 bg-emerald-50/80 border border-emerald-200 rounded-xl text-sm space-y-1.5">
+            <div class="font-bold text-emerald-950 flex items-center justify-between">
+              <span>パン屋のぺったん 萌系手作動物麵包 (Day 4)</span>
+              <span class="text-xs bg-emerald-200 text-emerald-900 px-2 py-0.5 rounded-md font-medium">冷泉町</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">07:00 開門即搶！週二正常營業。小熊、刺蝟、博多面具造型麵包，帶上由布院之森火車當作精緻早茶與安撫神物。</p>
+          </div>
+
+          <div class="p-3.5 bg-purple-50/80 border border-purple-200 rounded-xl text-sm space-y-1.5">
             <div class="font-bold text-purple-950 flex items-center justify-between">
               <span>勝烈亭 新市街本店 (Day 5 午餐)</span>
-              <span class="text-[10px] bg-purple-200 text-purple-900 px-2 py-0.5 rounded-md font-medium">熊本米其林</span>
+              <span class="text-xs bg-purple-200 text-purple-900 px-2 py-0.5 rounded-md font-medium">熊本米其林</span>
             </div>
-            <p class="text-slate-600">鹿兒島六白黑豚厚切炸豬排。無午間訂位，排程建議 12:15 前抵達抽取號碼牌候位。</p>
+            <p class="text-slate-700 leading-relaxed">鹿兒島六白黑豚厚切炸豬排。無午間訂位，排程建議 12:15 前抵達抽取號碼牌候位。</p>
           </div>
 
-          <div class="p-3 bg-red-50/80 border border-red-200 rounded-xl text-xs space-y-1">
+          <div class="p-3.5 bg-red-50/80 border border-red-200 rounded-xl text-sm space-y-1.5">
             <div class="font-bold text-red-950 flex items-center justify-between">
               <span>一蘭 太宰府參道店 (Day 7 午餐)</span>
-              <span class="text-[10px] bg-red-200 text-red-900 px-2 py-0.5 rounded-md font-medium">合格五角碗</span>
+              <span class="text-xs bg-red-200 text-red-900 px-2 py-0.5 rounded-md font-medium">合格五角碗</span>
             </div>
-            <p class="text-slate-600">59 公分長壽合格麵條。安排於 12:45 前往剛好避開最長排隊潮，備有兒童餐具。</p>
+            <p class="text-slate-700 leading-relaxed">59 公分長壽合格麵條。安排於 12:45 前往剛好避開最長排隊潮，備有兒童餐具。</p>
           </div>
 
-          <div class="p-3 bg-yellow-50/80 border border-yellow-200 rounded-xl text-xs space-y-1">
-            <div class="font-bold text-yellow-950 flex items-center justify-between">
-              <span>治一郎 博多 DEITOS 店 (Day 3/4 甜點)</span>
-              <span class="text-[10px] bg-yellow-200 text-yellow-900 px-2 py-0.5 rounded-md font-medium">絲滑布丁</span>
-            </div>
-            <p class="text-slate-600">位於博多站 1F いっぴん通り。純鮮奶油與蛋黃慢烤極致絲滑布丁，附焦糖液，回飯店極品宵夜。</p>
-          </div>
-
-          <div class="p-3 bg-rose-50/80 border border-rose-200 rounded-xl text-xs space-y-1">
+          <div class="p-3.5 bg-rose-50/80 border border-rose-200 rounded-xl text-sm space-y-1.5">
             <div class="font-bold text-rose-950 flex items-center justify-between">
               <span>たんや HAKATA (Day 8 早餐)</span>
-              <span class="text-[10px] bg-rose-200 text-rose-900 px-2 py-0.5 rounded-md font-medium">博多一番街</span>
+              <span class="text-xs bg-rose-200 text-rose-900 px-2 py-0.5 rounded-md font-medium">博多一番街</span>
             </div>
-            <p class="text-slate-600">超人氣炙燒薄切牛舌朝食定食，附牛尾湯與生雞蛋明太子拌飯，出餐快速營養滿分。</p>
+            <p class="text-slate-700 leading-relaxed">超人氣炙燒薄切牛舌朝食定食，附牛尾湯與生雞蛋明太子拌飯，出餐快速營養滿分。</p>
           </div>
         </div>
       </div>
@@ -426,91 +426,91 @@
 
   </main>
 
+  <!-- Currency Modal -->
   <div id="currencyModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden backdrop-blur-xs">
-    <div class="bg-white w-full max-w-sm rounded-3xl p-5 shadow-2xl space-y-4 border border-slate-100">
+    <div class="bg-white w-full max-w-sm rounded-3xl p-6 shadow-2xl space-y-4 border border-slate-100">
       <div class="flex items-center justify-between border-b pb-3">
-        <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-lg">
             ¥
           </div>
-          <h3 class="font-bold text-slate-800 text-base">日圓 / 台幣 快速換算</h3>
+          <h3 class="font-bold text-slate-800 text-lg">日圓 / 台幣 快速換算</h3>
         </div>
-        <button onclick="toggleCurrencyModal(false)" class="text-slate-400 hover:text-slate-600 p-1">
-          <i class="fa-solid fa-xmark text-lg"></i>
+        <button onclick="toggleCurrencyModal(false)" class="text-slate-400 hover:text-slate-600 p-1.5">
+          <i class="fa-solid fa-xmark text-xl"></i>
         </button>
       </div>
 
-      <div class="space-y-3 text-xs">
+      <div class="space-y-3.5 text-sm">
         <div>
-          <label class="font-medium text-slate-600 block mb-1">參考匯率 (可自行微調)</label>
+          <label class="font-semibold text-slate-700 block mb-1">參考匯率 (可自行微調)</label>
           <div class="flex items-center space-x-2">
-            <span class="text-slate-400">1 JPY =</span>
-            <input type="number" step="0.001" id="customRate" value="0.215" oninput="calculateCurrency('jpy')" class="w-24 p-1.5 border border-slate-200 rounded-lg text-center font-outfit text-sm font-semibold text-slate-700">
-            <span class="text-slate-400">TWD</span>
+            <span class="text-slate-500 font-medium">1 JPY =</span>
+            <input type="number" step="0.001" id="customRate" value="0.215" oninput="calculateCurrency('jpy')" class="w-24 p-2 border border-slate-200 rounded-lg text-center font-outfit text-base font-semibold text-slate-800">
+            <span class="text-slate-500 font-medium">TWD</span>
           </div>
         </div>
 
-        <div class="space-y-2 pt-2">
-          <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200">
-            <label class="block text-[11px] font-semibold text-slate-500 mb-1">日圓金額 (JPY ¥)</label>
-            <input type="number" id="inputJpy" placeholder="0" oninput="calculateCurrency('jpy')" class="w-full text-xl font-bold font-outfit text-slate-800 bg-transparent focus:outline-none">
+        <div class="space-y-2.5 pt-1">
+          <div class="bg-slate-50 p-3.5 rounded-2xl border border-slate-200">
+            <label class="block text-xs font-bold text-slate-500 mb-1">日圓金額 (JPY ¥)</label>
+            <input type="number" id="inputJpy" placeholder="0" oninput="calculateCurrency('jpy')" class="w-full text-2xl font-bold font-outfit text-slate-900 bg-transparent focus:outline-none">
           </div>
 
           <div class="flex justify-center text-slate-400 my-1">
-            <i class="fa-solid fa-arrows-up-down"></i>
+            <i class="fa-solid fa-arrows-up-down text-base"></i>
           </div>
 
-          <div class="bg-emerald-50/70 p-3 rounded-2xl border border-emerald-200">
-            <label class="block text-[11px] font-semibold text-emerald-700 mb-1">約合新台幣 (TWD NT$)</label>
-            <input type="number" id="inputTwd" placeholder="0" oninput="calculateCurrency('twd')" class="w-full text-xl font-bold font-outfit text-emerald-800 bg-transparent focus:outline-none">
+          <div class="bg-emerald-50/70 p-3.5 rounded-2xl border border-emerald-200">
+            <label class="block text-xs font-bold text-emerald-700 mb-1">約合新台幣 (TWD NT$)</label>
+            <input type="number" id="inputTwd" placeholder="0" oninput="calculateCurrency('twd')" class="w-full text-2xl font-bold font-outfit text-emerald-800 bg-transparent focus:outline-none">
           </div>
         </div>
 
         <!-- Quick conversion chips -->
-        <div class="grid grid-cols-4 gap-1.5 pt-1 text-center font-outfit">
-          <button onclick="setQuickJpy(500)" class="py-1 bg-slate-100 rounded-lg hover:bg-slate-200 font-medium">500円</button>
-          <button onclick="setQuickJpy(1000)" class="py-1 bg-slate-100 rounded-lg hover:bg-slate-200 font-medium">1,000円</button>
-          <button onclick="setQuickJpy(3000)" class="py-1 bg-slate-100 rounded-lg hover:bg-slate-200 font-medium">3,000円</button>
-          <button onclick="setQuickJpy(10000)" class="py-1 bg-slate-100 rounded-lg hover:bg-slate-200 font-medium">10,000円</button>
+        <div class="grid grid-cols-4 gap-2 pt-1 text-center font-outfit text-sm">
+          <button onclick="setQuickJpy(500)" class="py-1.5 bg-slate-100 rounded-lg hover:bg-slate-200 font-bold text-slate-700">500円</button>
+          <button onclick="setQuickJpy(1000)" class="py-1.5 bg-slate-100 rounded-lg hover:bg-slate-200 font-bold text-slate-700">1,000円</button>
+          <button onclick="setQuickJpy(3000)" class="py-1.5 bg-slate-100 rounded-lg hover:bg-slate-200 font-bold text-slate-700">3,000円</button>
+          <button onclick="setQuickJpy(10000)" class="py-1.5 bg-slate-100 rounded-lg hover:bg-slate-200 font-bold text-slate-700">10,000円</button>
         </div>
       </div>
       
-      <button onclick="toggleCurrencyModal(false)" class="w-full py-2.5 bg-slate-900 text-white rounded-xl text-xs font-bold shadow-md hover:bg-black transition">
-        關閉
+      <button onclick="toggleCurrencyModal(false)" class="w-full py-3 bg-slate-900 text-white rounded-xl text-sm font-bold shadow-md hover:bg-black transition">
+        完成關閉
       </button>
     </div>
   </div>
 
   <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 safe-area-bottom shadow-lg">
-    <div class="max-w-md mx-auto grid grid-cols-3 py-1 px-2 text-center">
+    <div class="max-w-md mx-auto grid grid-cols-3 py-1.5 px-2 text-center">
       <button onclick="switchMainTab('itinerary')" id="navTabItinerary" class="flex flex-col items-center justify-center py-1 text-brand-600 font-bold transition">
-        <i class="fa-solid fa-calendar-days text-lg mb-0.5"></i>
-        <span class="text-[11px]">8天行程</span>
+        <i class="fa-solid fa-calendar-days text-xl mb-1"></i>
+        <span class="text-xs font-bold">8天行程</span>
       </button>
-      <button onclick="switchMainTab('prep')" id="navTabPrep" class="flex flex-col items-center justify-center py-1 text-slate-400 font-medium transition hover:text-slate-700">
-        <i class="fa-solid fa-bell-concierge text-lg mb-0.5"></i>
-        <span class="text-[11px]">搶票與劃位</span>
+      <button onclick="switchMainTab('prep')" id="navTabPrep" class="flex flex-col items-center justify-center py-1 text-slate-400 font-semibold transition hover:text-slate-700">
+        <i class="fa-solid fa-bell-concierge text-xl mb-1"></i>
+        <span class="text-xs font-semibold">搶票與劃位</span>
       </button>
-      <button onclick="switchMainTab('highlights')" id="navTabHighlights" class="flex flex-col items-center justify-center py-1 text-slate-400 font-medium transition hover:text-slate-700">
-        <i class="fa-solid fa-baby text-lg mb-0.5"></i>
-        <span class="text-[11px]">親子錦囊/美食</span>
+      <button onclick="switchMainTab('highlights')" id="navTabHighlights" class="flex flex-col items-center justify-center py-1 text-slate-400 font-semibold transition hover:text-slate-700">
+        <i class="fa-solid fa-baby text-xl mb-1"></i>
+        <span class="text-xs font-semibold">親子錦囊/美食</span>
       </button>
     </div>
   </nav>
 
   <!-- Notification Toast Container -->
-  <div id="toast" class="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-slate-900/90 text-white text-xs px-4 py-2 rounded-full shadow-lg pointer-events-none opacity-0 transition-opacity duration-300 flex items-center space-x-2">
-    <i class="fa-solid fa-circle-check text-emerald-400"></i>
-    <span id="toastMsg">已儲存</span>
+  <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/95 text-white text-sm px-5 py-2.5 rounded-full shadow-lg pointer-events-none opacity-0 transition-opacity duration-300 flex items-center space-x-2">
+    <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
+    <span id="toastMsg" class="font-medium">已儲存</span>
   </div>
 
   <script>
-    // Complete structured data for 8-day Kyushu family trip based precisely on the updated optimized itinerary
     const tripData = {
       1: {
         date: "2026/11/14 (六)",
         title: "Day 1 (11/14 六) · 啟程抵達、博多站換票與人氣可頌採買",
-        subtitle: "中華航空 CI116 直飛、博多綠色窗口取票、MIGNON 可頌、天神內臟",
+        subtitle: "中華航空 CI116 直飛、綠色窗口換票與劃位、MIGNON 迷你可頌、天神內臟",
         badge: "華航直飛 × 綠色窗口換票",
         badgeColor: "bg-blue-100 text-blue-700",
         budget: "約 5,000 - 7,000 日圓 (地鐵車資、MIGNON 可頌、天神內臟宵夜約 1,800-2,500 円/人)",
@@ -519,10 +519,10 @@
         items: [
           {
             time: "14:00",
-            title: "桃園機場第一航廈報到、行李與嬰兒推車託運",
+            title: "桃園機場第一航廈報到、行李託運與嬰兒推車託運",
             type: "flight",
             desc: "搭乘中華航空 CI116 (16:25 起飛 ➔ 19:35 抵達福岡)，飛行時間約 2 小時 10 分鐘。",
-            tips: "幼童推車可在登機門口實施機邊托運，下機時登機門口領取，準備好機上安撫貼紙書與米餅。"
+            tips: "【推車與起降照護】嬰兒推車可於登機門前進行「機邊託運」，下機後於空橋門口領取；起飛與降落時段可準備常溫水壺、米餅或奶嘴，引導 2Y10M 幼童吞嚥，減緩耳壓不適。隨身包請備妥貼紙書與防鬧小玩具。"
           },
           {
             time: "19:35",
@@ -533,10 +533,11 @@
           },
           {
             time: "19:45",
-            title: "景點 1：國際線 ➔ 國內線免費接駁巴士",
+            title: "景點 1：福岡機場國際線航廈出關與聯外大眾接駁",
             type: "bus",
-            duration: "車程約 10-15 分鐘",
-            desc: "步出航廈至 1 號站牌搭乘免費聯絡公車前往國內線地鐵站。接駁巴士每 5-8 分鐘一班。",
+            duration: "停留約 50 分鐘 (含等車車程)",
+            desc: "步出國際線航廈入境大廳，依清晰地面引導至「1 號站牌」搭乘免費聯絡公車前往國內線地鐵站。班次密集（每 5-8 分鐘一班）。",
+            tips: "【推車乘車要領】若車內旅客較多，建議大人先將幼童抱起，將推車快速折疊收合，大件行李集中放置於低底盤行李專區，行車時間約 10-15 分鐘即可抵達國內線航廈前廣場。",
             mapQuery: "福岡空港国際線ターミナル 1番のりば"
           },
           {
@@ -544,7 +545,8 @@
             title: "景點 2：福岡市地下鐵空港線 (福岡空港站 ➔ 博多站)",
             type: "subway",
             duration: "2站直達約 5 分鐘",
-            desc: "國內線地下直通地鐵站，有大型無障礙電梯直達月台，推車與大行李移動非常方便。單程 260 日圓/人。",
+            desc: "由接駁公車下車處搭乘戶外無障礙大電梯直下地下 1 樓地鐵票閘口，搭乘地下鐵空港線往「姪浜/西唐津」方向，僅需搭乘 2 站（約 5 分鐘，單程 260 円/大人，幼童免費）直達博多站。",
+            tips: "【無障礙動線】國內線地鐵站動線全平整，月台設有寬敞無障礙升降電梯直通，推車與大件行李移動非常順暢。",
             mapQuery: "福岡空港駅"
           },
           {
@@ -552,26 +554,27 @@
             title: "景點 3：JR 博多站綠色窗口 (兌換 JR Pass ＆ 領指定席車票)",
             type: "ticket",
             duration: "停留 25 分鐘",
-            desc: "持護照與憑證兌換北九州 3 日券。將預先排好的班次時間單交給櫃檯一次劃齊：Day 3 由布院之森、Day 4 Sonic 特急、Day 5 熊本新幹線之指定席車票！",
-            tips: "JR 綠色窗口營業時間至 22:00，時間充裕但請備齊全家人護照。",
+            desc: "地鐵博多站搭乘電梯上 1F JR 中央大廳。持全家護照與預訂憑證兌換「北九州 3 日券」，並將印好或抄寫好的指定席班次表一次出示給櫃檯，一口氣劃齊：Day 3 Sonic 特急 (08:23 / 19:12)、Day 4 由布院之森 1 號/ 6 號實體票、Day 5 熊本新幹線 (08:49 / 18:05)。",
+            tips: "【時間管理】JR 綠色窗口（みどりの窓口）營業至 22:00，21:05 抵達時間充裕，首夜一次領齊後續三天的特急與新幹線實體車票，之後幾天乘車直接走人工或自動剪票口，不用再花時間排隊劃位！",
             mapQuery: "JR博多駅 みどりの窓口"
           },
           {
             time: "21:30",
             title: "景點 4：il FORNO del MIGNON 博多店 (現烤排隊迷你可頌)",
             type: "food",
-            duration: "15 分鐘",
-            desc: "位於 JR 在來線中央剪票口正前方。福岡殿堂級排隊美食，現烤秤重販售（原味、巧克力、明太子、地瓜口味），採買當宵夜與隔日早餐點心。",
+            duration: "15 分鐘 (21:30 - 21:45)",
+            desc: "位於 JR 在來線中央剪票口正前方。福岡殿堂級排隊美食，現烤秤重販售（原味、巧克力、明太子、地瓜口味），採買出爐可頌當作宵夜與隔日早餐點心。",
             hours: "營業時間：07:00 - 23:00（全年無休）",
+            tips: "【口味推薦】剛出爐香氣撲鼻，推薦大人必吃香脆微辣的「明太子可頌」，給幼童可挑選香甜綿密的「地瓜可頌」或「原味甜糖霜可頌」，外皮酥脆內層鬆軟，放涼也極為可口。",
             mapQuery: "il FORNO del MIGNON 博多店"
           },
           {
             time: "21:45",
             title: "晚餐、宵夜：鐵板燒 天神內臟 博多一番街店 (Teppan Tenjin Horumon)",
             type: "food",
-            duration: "約 35 分鐘",
-            desc: "位於 JR 博多城 B1「博多一番街」內。營業至 22:00 (L.O. 21:30)。推薦招牌鐵板牛內臟定食或肉排組合。",
-            tips: "【壓線與幼童應對】若 21:30 前完成換票可推推車下 B1 確認入座。若幼童已疲累或客滿截止收客，可改至飯店旁超商採買熱食或享用 MIGNON 可頌回房享用。",
+            duration: "約 35 分鐘 (21:45 - 22:20)",
+            desc: "位於 JR 博多城 B1「博多一番街」內（由 1F 中央大廳搭手扶梯或電梯直達 B1）。營業至 22:00 (最後點餐 L.O. 21:30)。推薦招牌鐵板牛內臟定食或肉排組合。",
+            tips: "【壓線與幼童應對】若 21:30 前完成換票可由 1 位大人先推推車下 B1 取號或確認入座。吧台油煙與鐵板溫度較高，若幼童已疲累或客滿截止收客，可改至飯店旁超商採買熱食或享用 MIGNON 可頌回房享用，避免孩子負擔過大。",
             mapQuery: "天神ホルモン 博多駅店"
           },
           {
@@ -579,7 +582,8 @@
             title: "景點 5：GRAND BASE Hakataminami (飯店 Check-in 入住)",
             type: "hotel",
             duration: "步行約 8-10 分鐘",
-            desc: "由博多站平坦人行道推車步行抵達。採無人平板自助入住，客房附設洗脫烘衣機與齊全生活設備。",
+            desc: "由博多站筑紫口出站，沿平坦開闊人行道推車步行約 8-10 分鐘抵達。採無人自助平板 Check-in，輸入預訂代碼即可取得專屬房門電子密碼。",
+            tips: "【房內設施】客房內空間寬敞，配有專用洗脫烘一體洗衣機、微波爐、冰箱與電熱水壺，進房後可立即清洗衣物並替幼童溫熱開水，非常適合親子長住不換飯店！",
             mapQuery: "GRAND BASE Hakataminami"
           },
           {
@@ -592,7 +596,7 @@
       },
       2: {
         date: "2026/11/15 (日)",
-        title: "Day 2 (11/15 日) · 神社古風晨步、麵包超人同樂、石原牛午餐與運河城散策",
+        title: "Day 2 (11/15 日) · 神社古風晨步、麵包超人同樂（含午後再入場）、石原牛午餐與運河城散策",
         subtitle: "櫛田神社、麵包超人博物館（午後再入場）、石原牛A5和牛、運河城樓層指南",
         badge: "親子放電 × A5和牛",
         badgeColor: "bg-amber-100 text-amber-800",
@@ -602,86 +606,205 @@
         items: [
           {
             time: "07:00",
-            title: "起床梳洗、早餐：[ 待補充 ]",
+            title: "起床梳洗整裝、早餐：[ 待補充 ]",
             type: "food",
             desc: "飯店享用昨日採買麵包或附近咖啡廳早餐，08:00 步行出發前往地鐵站。",
             isCustomizable: true
           },
           {
             time: "08:20",
-            title: "景點 1：櫛田神社 ＆ 川端通商店街晨間散策",
+            title: "景點 1：櫛田神社（博多總鎮守）＆ 川端通商店街晨間散策",
             type: "sight",
             duration: "1 小時 15 分鐘",
             desc: "博多總鎮守，晨間參拜幽靜避開人群。參觀壯觀常設的「博多祇園山笠」巨型花車；400 公尺有頂拱廊商店街路面極平整，推車散步非常舒適。",
+            tips: "【拍照與動線】可帶幼童至手水舍洗手淨水體驗；神社側門直通川端通商店街，拱廊內完全避風擋雨且全無階梯，推車一路向北順暢散步至 Riverain 商場。",
             mapQuery: "櫛田神社"
           },
           {
             time: "09:35",
-            title: "景點 2：博多 Riverain 水岸漫步與開館排隊",
+            title: "景點 2：博多 Riverain 水岸周邊漫步與開館排隊",
             type: "walk",
             duration: "25 分鐘",
-            desc: "由川端通北端直通 Riverain 商場。09:50 搭乘無障礙電梯至 5 樓排隊等候 10:00 博物館開館。",
+            desc: "由川端通商店街北端直通 Riverain 商場（步行約 5 分鐘）。於水岸林蔭大道稍作停留，並於 09:50 搭乘商場無障礙景觀電梯直達 5 樓售票處排隊等候 10:00 博物館開門。",
             mapQuery: "博多リバレイン"
           },
           {
             time: "10:00",
-            title: "景點 3-1：福岡麵包超人兒童博物館 (上午場)",
+            title: "景點 3-1：福岡麵包超人兒童博物館 in 購物商場 (上午場)",
             type: "kids",
             duration: "2.5 小時 (10:00 - 12:30)",
             desc: "全室內無障礙防撞空間！室內沙坑、彩虹滑梯、角色見面會。滿 1 歲幼童即需購票。",
-            tips: "【關鍵手續】離場時務必在出口處「蓋手章」，中午下樓吃完和牛可憑章免費再次入場！",
+            tips: "【關鍵手續】離場時務必在出口處「蓋手章」，中午下樓吃完和牛可憑章免費再次入場！館內設有齊全哺乳室與幼童專用洗手間。",
             mapQuery: "福岡アンパンマンこどもミュージアムinモール"
           },
           {
             time: "12:30",
-            title: "午餐：焼肉処 石原牛 (博多 Riverain 1F)",
+            title: "午餐：焼肉処 石原牛 (博多 Riverain 1F・牧場直送 A5 頂級和牛)",
             type: "food",
-            duration: "1 小時 15 分鐘",
-            desc: "由 5 樓搭電梯直達 1 樓。鹿兒島石原牧場直營 A5 和牛，推薦超高 CP 值的「贅沢午間商業燒肉套餐」；設有獨立包廂，推車與幼童友善，下樓即享美食。",
-            tips: "出發前 1 個月提前預訂包廂，備註 3 大 1 幼同行。",
+            duration: "1 小時 15 分鐘 (12:30 - 13:45)",
+            desc: "由 5 樓搭電梯直達 1 樓。鹿兒島石原牧場直營 A5 和牛，推薦超高 CP 值的「贅沢午間商業燒肉套餐」；店內設有獨立包廂，推車與幼童友善，玩完下樓即可開吃。",
+            tips: "出發前 1 個月提前預訂包廂，備註 3 大 1 幼同行。若幼童不吃生冷牛肉，可點溫潤甘甜的牛骨蔬菜溫湯配白飯。",
             mapQuery: "焼肉処 石原牛"
           },
           {
             time: "13:45",
-            title: "景點 3-2：麵包超人博物館 (午後場再入場)",
+            title: "景點 3-2：福岡麵包超人兒童博物館 (午後場再入場)",
             type: "kids",
             duration: "1 小時 (13:45 - 14:45，總計滿 3.5 小時)",
             desc: "憑手章二次入場，觀賞 14:00 的互動劇場演出或採買原創周邊，讓孩子徹底放電玩透。"
           },
           {
             time: "14:55",
-            title: "景點 4：THE FULL FULL HAKATA (現烤明太子法包)",
+            title: "景點 4：THE FULL FULL HAKATA (現烤明太子法國麵包)",
             type: "food",
-            duration: "35 分鐘",
-            desc: "Riverain 步行約 8-10 分鐘。名產明太子法包每 15-20 分鐘出爐一次，外脆內軟，買來當下午茶點心。",
-            hours: "營業時間：10:00 - 19:00（週二公休，週日正常營業）",
+            duration: "35 分鐘 (14:55 - 15:30)",
+            desc: "Riverain 步行約 8-10 分鐘（經祇園町）。名產明太子法包每 15-20 分鐘出爐一次，外脆內軟，適合外帶當作下午茶點心。",
+            hours: "營業時間：10:00 - 19:00（每週二公休，週日正常營業）",
+            tips: "【貼心切塊服務】結帳時店員會主動詢問是否需現切（通常切成 4-6 段），外皮酥脆、內餡明太子奶油鹹香滑順，可直接於店外座椅享用或帶至運河城休憩廣場吃。",
             mapQuery: "THE FULL FULL HAKATA"
           },
           {
             time: "15:40",
             title: "景點 5：博多運河城 (Canal City Hakata)",
             type: "shop",
-            duration: "2.5 小時",
-            desc: "B1 太陽廣場每半點有壯觀水舞秀。商場走道平整寬敞，幼童可於推車上午睡休息。",
+            duration: "2.5 小時 (15:40 - 18:10)",
+            desc: "THE FULL FULL 步行 2-3 分鐘直達。B1 太陽廣場每半點有壯觀水舞秀。商場走道平整寬敞，幼童可於推車上午睡休息。",
             tips: "【精選樓層分布】B1F：吉卜力橡子共和國、Sanrio、築地銀章魚燒、太陽水舞廣場；1F：GAP 旗艦店；3F：Columbia、The North Face+、ABC-MART GRAND STAGE、MUJI；5F：拉麵競技場。",
             mapQuery: "キャナルシティ博多"
           },
           {
             time: "18:15",
-            title: "晚餐：[ 待補充 ] (運河城 5F 拉麵競技場或 B1 餐廳街)",
+            title: "晚餐：[ 待補充 ] (運河城 5 樓「拉麵競技場」或地下一樓餐廳街)",
             type: "food",
             desc: "可在商場內挑選適合全家的拉麵或日式定食，隨後搭計程車回飯店。",
             isCustomizable: true
+          },
+          {
+            time: "19:45",
+            title: "搭乘計程車或漫步返回飯店休息",
+            type: "walk",
+            desc: "車程約 8-10 分鐘，車資約 1,000 日圓。"
           }
         ]
       },
       3: {
         date: "2026/11/16 (一)",
-        title: "Day 3 (11/16 一) · 超萌動物造型麵包、由布院之森景觀列車、當代藝術美術館與秋景溫泉小鎮",
-        subtitle: "Pettan 動物麵包、由布院之森、烤香菇、telato抹茶、COMICO美術館、金鱗湖、回程便當、治一郎布丁",
+        title: "Day 3 (11/16 一) · 門司港懷舊鐵道巡禮、燒咖哩名物與小倉城、八坂神社、資先生烏龍麵",
+        subtitle: "特急 Sonic 號、九州鐵道紀念館、藍翼吊橋、燒咖哩、小倉城、八坂神社、資先生烏龍麵、治一郎布丁",
         badge: "JR Pass 啟用 Day 1",
         badgeColor: "bg-emerald-100 text-emerald-800",
-        budget: "約 14,000 日圓 (COMICO 門票 1,500円×3、烤香菇、抹茶冰淇淋、治一郎布丁、計程車)",
+        budget: "約 9,000 - 11,000 日圓 (門票、小火車、燒咖哩、資先生晚餐、治一郎布丁)",
+        transportSummary: "特急 Sonic (47分) ➔ 鹿兒島本線 ➔ 全程平坦無障礙散步",
+        hotel: "GRAND BASE Hakataminami",
+        items: [
+          {
+            time: "07:00",
+            title: "起床梳洗整裝、早餐：[ 待補充 ]",
+            type: "food",
+            desc: "飯店梳洗，08:00 漫步約 8-10 分鐘至 JR 博多站。",
+            isCustomizable: true
+          },
+          {
+            time: "08:23",
+            title: "搭乘 JR 特急 Sonic 7 號（音速號）(博多 ➔ 小倉 ➔ 門司港)",
+            type: "train",
+            duration: "08:23 發車，約 09:27 抵達門司港",
+            desc: "博多搭 Sonic 於 09:05 到小倉，同月台轉乘 09:13 鹿兒島本線區間車抵達大正風情門司港站。"
+          },
+          {
+            time: "09:35",
+            title: "景點 1：九州鐵道紀念館 (門司港站旁)",
+            type: "kids",
+            duration: "1 小時 10 分鐘 (09:35 - 10:45)",
+            desc: "門司港站出站步行 2 分鐘直達。戶外展示實體蒸汽火車與懷舊車廂；迷你鐵道公園（Mini Railroad）大人可陪同 2 歲 10 個月幼童親自駕駛迷你電車穿梭平交道（每次 300 円）。",
+            tips: "【幼童駕駛體驗】投幣 300 日圓即可讓幼童握著前進操控桿，在號誌燈前停等紅綠燈，是 2-3 歲小童最難忘的體驗！週一正常營業，館內亦有無障礙坡道與育嬰室。",
+            mapQuery: "九州鉄道記念館"
+          },
+          {
+            time: "10:50",
+            title: "景點 2：門司港懷舊區漫步 ＆ 藍翼門司吊橋 (Blue Wing Moji)",
+            type: "sight",
+            duration: "1 小時 5 分鐘 (10:50 - 11:55)",
+            desc: "平坦海港木棧道，沿途參觀舊門司稅關等大正歐風建築；準時觀賞 11:00 整點「藍翼吊橋」開橋 20 分鐘過程，開橋後渡船通過、閉橋後踏上橋面祈福。",
+            mapQuery: "ブルーウィングもじ"
+          },
+          {
+            time: "12:00",
+            title: "午餐：門司港特色「燒咖哩」(伽哩本舖 或 Bear's Fruits)",
+            type: "food",
+            duration: "1 小時 15 分鐘 (12:00 - 13:15)",
+            desc: "濃郁焗烤起司配半熟蛋燒咖哩。「伽哩本舖」坐擁港灣海景，備有不辣帶果香甜味的「兒童咖哩套餐」，大人小孩都能開心享用。",
+            mapQuery: "伽哩本舗 門司港レトロ店"
+          },
+          {
+            time: "13:20",
+            title: "步行返回門司港站，搭乘 JR 列車返回小倉",
+            type: "train",
+            duration: "13:30 發車 ➔ 13:45 抵達小倉",
+            desc: "搭乘 JR 鹿兒島本線快速/普通列車返回 JR 小倉站 (車程約 15 分鐘)。"
+          },
+          {
+            time: "14:00",
+            title: "景點 3：小倉城天守閣",
+            type: "sight",
+            duration: "1 小時 15 分鐘 (14:00 - 15:15)",
+            desc: "JR 小倉站南口沿平坦人行步道推車散步約 15 分鐘抵達。內部設有現代化全無障礙電梯，推車可直達頂樓。有等比例發聲電動木馬（幼童可乘坐合影）、大名駕籠抬轎體驗與互動光影模型。",
+            mapQuery: "小倉城"
+          },
+          {
+            time: "15:15",
+            title: "景點 4：八坂神社 (小倉祇園八坂神社)",
+            type: "sight",
+            duration: "45 分鐘 (15:15 - 16:00)",
+            desc: "從小倉城天守閣出口步行 1-2 分鐘（位於城下同平坦園區內）。巨木參天、石板步道平坦，可帶幼童洗手淨水參拜祈求健康，收藏特色太鼓造型御守。",
+            mapQuery: "八坂神社 小倉"
+          },
+          {
+            time: "16:15",
+            title: "景點 5：魚町銀天街 ＆ 旦過市場周邊散策",
+            type: "shop",
+            duration: "1 小時 30 分鐘 (16:15 - 17:45)",
+            desc: "全日本第一條拱頂遮雨棚商店街，完全不受氣候影響。平整寬敞極好推推車，感受濃厚在地市集風情。",
+            mapQuery: "魚町銀天街"
+          },
+          {
+            time: "17:45",
+            title: "晚餐：資さんうどん 魚町店 (資先生烏龍麵・北九州靈魂美食)",
+            type: "food",
+            duration: "1 小時 15 分鐘 (17:45 - 19:00)",
+            desc: "位於魚町銀天街拱廊內。24 小時營業。推薦招牌肉牛蒡天婦羅烏龍麵、黑輪燉牛筋白蘿蔔、名物牡丹餅。高湯甘醇，麵條軟嫩有兒童餐具，剪碎麵條餵幼童最方便。",
+            mapQuery: "資さんうどん 魚町店"
+          },
+          {
+            time: "19:00",
+            title: "前往 JR 小倉站搭乘 JR 特急 Sonic 號 返回博多站",
+            type: "train",
+            duration: "19:12 發車 ➔ 19:59 抵達博多 (車程 47 分)",
+            desc: "持 JR Pass 劃位指定席，車程舒適平穩。"
+          },
+          {
+            time: "20:00",
+            title: "甜點伴手外帶：治一郎 JR 博多 City 店 (治一郎のプリン・布丁採買)",
+            type: "food",
+            duration: "15 分鐘 (20:00 - 20:15)",
+            desc: "位於博多站 1 樓「博多 DEITOS いっぴん通り（逸品通）」（出剪票口步行 1 分鐘）。純鮮奶油與蛋黃慢烤極致絲滑布丁，附焦糖液，外帶回房當奢華宵夜。",
+            mapQuery: "治一郎 JR博多シティ店"
+          },
+          {
+            time: "20:15",
+            title: "步行返回飯店休息",
+            type: "hotel",
+            desc: "回到 GRAND BASE Hakataminami 享用治一郎布丁，結束充實的門司港小倉一日遊。"
+          }
+        ]
+      },
+      4: {
+        date: "2026/11/17 (二)",
+        title: "Day 4 (11/17 二) · 超萌動物造型麵包、由布院之森景觀列車、漫遊童話村與金鱗湖秋景溫泉小鎮",
+        subtitle: "Pettan 動物麵包、由布院之森 1 號/6 號、烤香菇、telato抹茶、童話村、金鱗湖賞楓、回程限定便當",
+        badge: "JR Pass 啟用 Day 2",
+        badgeColor: "bg-emerald-100 text-emerald-800",
+        budget: "約 9,000 - 11,000 日圓 (造型麵包、計程車資、烤香菇、telato抹茶冰、沿街甜點與伴手禮)",
         transportSummary: "由布院之森往返 (Pass折抵) ➔ 當地平坦推車漫步",
         hotel: "GRAND BASE Hakataminami",
         items: [
@@ -689,7 +812,7 @@
             time: "06:30",
             title: "起床梳洗整裝、幼童著裝整頓、早餐：[ 待補充 ]",
             type: "food",
-            desc: "全家梳洗整頓，07:00 大人代表出門採買。",
+            desc: "全家梳洗整頓，07:00 大人代表搭計程車出門採買。",
             isCustomizable: true
           },
           {
@@ -698,7 +821,7 @@
             type: "food",
             duration: "30 分鐘 (07:15 - 07:45)",
             desc: "大人代表搭計程車 (約 5-6 分鐘，車資約 800-1,000 円) 直達冷泉町門市。07:00 準時開門，超萌小熊、刺蝟、貓咪與博多面具造型麵包出爐最齊全。採買完畢後搭計程車回飯店會合，帶上火車當早茶與安撫點心！",
-            tips: "【營業確認】週六日公休，週一正常開門！",
+            tips: "【營業確認】週二正常開門！外觀可愛且內餡有卡士達、紅豆或香濃巧克力，是安撫 2Y 幼童坐火車的神器。",
             mapQuery: "パン屋のぺったん"
           },
           {
@@ -718,7 +841,7 @@
             title: "景點 2：特急觀光列車「由布院之森 1 號」",
             type: "train",
             duration: "09:17 ➔ 11:31 (車程 2 小時 14 分)",
-            desc: "全車指定席（需提前30天搶票）。高架木質展望車廂視野開闊，邊賞秋景邊享用動物麵包當輕食早茶。",
+            desc: "全車指定席（需提前30天於10/18 09:00搶票）。高架木質展望車廂視野開闊，邊賞秋景邊享用動物麵包當輕食早茶。",
             tips: "【印章與紀念合影】第 3 與第 4 節車廂交接處設有專屬紀念章蓋印台（由布院站內也有一枚可一起收集）；下車記得與復古綠色車頭合影留念！",
             mapQuery: "JR博多駅"
           },
@@ -726,164 +849,67 @@
             time: "11:45",
             title: "景點 3：由布院車站 ＆ 湯之坪街道散策 (含人氣炭烤香菇與頂級抹茶冰淇淋)",
             type: "sight",
-            duration: "1 小時 15 分鐘 (11:45 - 13:00)",
+            duration: "1 小時 30 分鐘 (11:45 - 13:15)",
             desc: "出站正對由布岳壯麗山景。沿途平坦步道，必嚐人氣排隊名物！",
             tips: "【特色美食推薦】1. 湯布院 shiitakemonster：現烤原木大香菇，推「奶油醬油口味」，厚肉爆汁！ 2. telato：日本茶鑑定士監製，1-5 號濃度八女/大分高級抹茶 Gelato，大人品深焙、小孩享牛奶甜香。另有 B-Speak 蛋糕捲、SNOOPY 茶屋與金賞可樂餅。",
             mapQuery: "湯の坪街道"
           },
           {
-            time: "13:00",
+            time: "13:15",
             title: "午餐：[ 待補充 ] (由布院沿途地雞料理、溫泉烏龍麵或特色輕食)",
             type: "food",
-            desc: "湯之坪沿線享用熱騰騰在地溫泉料理（用餐約 30 分鐘）。",
+            duration: "約 45 分鐘",
+            desc: "湯之坪沿線享用熱騰騰在地溫泉料理或特色輕食。",
             isCustomizable: true
           },
           {
-            time: "13:30",
+            time: "14:00",
             title: "景點 4：由布院童話村 (Floral Village)",
             type: "kids",
-            duration: "25 分鐘 (13:30 - 13:55)",
-            desc: "重現英國鄉村風情之迷你園區，穿梭於歐風小屋間與笑笑羊、迷你小兔打招呼合照，隨後推車步行 2 分鐘直達 COMICO 美術館。",
+            duration: "45 分鐘 (14:00 - 14:45)",
+            desc: "重現英國科茨沃爾德（Cotswolds）風情之歐風迷你童話小鎮。街道鋪面平坦好推推車，可穿梭於可愛低矮小屋間拍照打卡，並讓幼童近距離觀賞笑笑羊、迷你小兔等小動物，氛圍溫馨童趣。",
             mapQuery: "Yufuin Floral Village"
           },
           {
-            time: "14:00",
-            title: "景點 5：COMICO ART MUSEUM YUFUIN (當代藝術美術館・預約 14:00 場次)",
+            time: "14:50",
+            title: "景點 5：金鱗湖賞秋楓與湖畔步道散策",
             type: "sight",
-            duration: "1 小時 (14:00 - 15:00)",
-            desc: "隈研吾操刀之極致黑杉木水景建築。典藏草間彌生、奈良美智、村上隆與杉本博司巨作；2 樓戶外露台可近距離欣賞奈良美智名作「Your Dog」與由布岳同框！",
-            tips: "【門票與推車】出發前 1 個月於官網預約 14:00（線上特價 1,500 円/大人，幼童免費）。電梯直達 2 樓；空間極靜謐，若幼童在推車上午睡最為完美；若醒著請大人牽手慢行。",
-            mapQuery: "COMICO ART MUSEUM YUFUIN"
-          },
-          {
-            time: "15:05",
-            title: "景點 6：金鱗湖賞秋楓與湖畔步道",
-            type: "sight",
-            duration: "1 小時 (15:05 - 16:05)",
-            desc: "美術館沿大分川步道步行約 3-5 分鐘直達湖畔。11 月中旬為金鱗湖紅葉與落羽松最美時節，湖畔平整木棧道推車順暢好走，可欣賞清澈湖面倒影與夢幻冷熱交會輕煙。",
+            duration: "1 小時 15 分鐘 (14:50 - 16:05)",
+            desc: "由童話村沿大分川平坦林蔭步道步行約 5 分鐘直達湖畔。11 月中旬為金鱗湖紅葉與落羽松最燦爛的時節。湖畔環湖木棧道無階梯阻礙，推車順暢好走；欣賞清澈湖面倒影與夢幻水溫交會輕煙，幼童亦可在此安穩推車午睡或散步。",
             mapQuery: "金鱗湖"
           },
           {
             time: "16:05",
             title: "沿湯之坪街道悠閒漫步返回由布院站 (步行約 25-30 分鐘)",
             type: "walk",
-            desc: "漫步回車站候車，傍晚山區偏涼請給幼童添外套。"
+            desc: "漫步回車站候車，沿途採買伴手禮。傍晚山區偏涼請給幼童添外套。"
           },
           {
             time: "17:17",
             title: "搭乘「由布院之森 6 號」返回博多 ＆ 享用回程預約便當",
             type: "train",
             duration: "17:17 發車 ➔ 19:27 抵達博多",
-            desc: "【特色便當享用（回程晚點心）】若出發前 30 天已線上預約「由布院之森限定特色便當」（由布院之森便當、折鶴便當等），上車後可直接前往 3 號車廂餐車吧台出示憑證領取，在復古溫馨的車廂中一邊欣賞暮色黃昏山景、一邊當作全家的傍晚輕食美味早晚餐。"
+            desc: "【特色便當享用（回程晚點心）】出發前 30 天線上預約之限定便當（如由布院之森便當、折鶴便當），上車後前往 3 號車廂吧台領取，在復古溫馨車廂中欣賞暮色黃昏山景並當作早晚餐。",
+            tips: "回程列車平穩，幼童吃飽後多半可在車廂中安穩補眠。"
           },
           {
             time: "19:30",
-            title: "甜點伴手外帶：治一郎 JR 博多 City 店 (治一郎のプリン・布丁採買)",
-            type: "food",
-            duration: "15 分鐘 (19:30 - 19:45)",
-            desc: "位於博多站 1 樓「博多 DEITOS いっぴん通り（逸品通）」。純鮮奶油與蛋黃慢烤極致絲滑布丁，附焦糖液，外帶回房當奢華宵夜。",
-            mapQuery: "治一郎 JR博多シティ店"
+            title: "返回博多車站，步行出站",
+            type: "walk",
+            desc: "抵達博多站，步行出站前往周邊享用晚餐或外帶熱食。"
           },
           {
             time: "19:45",
             title: "晚餐：[ 待補充 ]",
             type: "food",
-            desc: "博多站周邊享用或回飯店享用治一郎布丁宵夜。",
+            desc: "博多站周邊享用或外帶回飯店。",
             isCustomizable: true
           },
           {
             time: "21:00",
-            title: "返回飯店休息，享用治一郎布丁宵夜",
+            title: "返回飯店休息",
             type: "hotel",
-            desc: "整理行囊，回味美好的由布院鐵道之旅。"
-          }
-        ]
-      },
-      4: {
-        date: "2026/11/17 (二)",
-        title: "Day 4 (11/17 二) · 門司港懷舊鐵道巡禮、燒咖哩名物與小倉城、八坂神社、資先生烏龍麵",
-        subtitle: "特急 Sonic 號、九州鐵道紀念館、藍翼吊橋、燒咖哩、小倉城、資先生烏龍麵",
-        badge: "JR Pass 啟用 Day 2",
-        badgeColor: "bg-emerald-100 text-emerald-800",
-        budget: "約 8,500 - 10,500 日圓 (門票、燒咖哩、烏龍麵晚餐、御守)",
-        transportSummary: "特急 Sonic (47分) ➔ 鹿兒島本線 ➔ 全程平坦無障礙散步",
-        hotel: "GRAND BASE Hakataminami",
-        items: [
-          {
-            time: "08:23",
-            title: "搭乘 JR 特急 Sonic 7 號 (博多 ➔ 小倉 ➔ 門司港)",
-            type: "train",
-            duration: "08:23 發車，約 09:27 抵達門司港",
-            desc: "博多搭 Sonic 於 09:05 到小倉，同月台轉乘 09:13 區間車抵達大正風情門司港站。"
-          },
-          {
-            time: "09:35",
-            title: "景點 1：九州鐵道紀念館 (門司港站旁)",
-            type: "kids",
-            duration: "1 小時 10 分鐘",
-            desc: "戶外展示實體蒸汽火車與懷舊車廂；迷你鐵道公園（Mini Railroad）大人可陪同 2 歲 10 個月幼童親自駕駛迷你電車穿梭平交道（每次 300 円）。",
-            mapQuery: "九州鉄道記念館"
-          },
-          {
-            time: "10:50",
-            title: "景點 2：門司港懷舊區 ＆ 藍翼門司吊橋",
-            type: "sight",
-            duration: "1 小時 5 分鐘",
-            desc: "平坦海港木棧道，準時觀賞 11:00 整點「藍翼吊橋」開橋 20 分鐘過程，開合後渡船通過、閉橋後踏上祈福。",
-            mapQuery: "ブルーウィングもじ"
-          },
-          {
-            time: "12:00",
-            title: "午餐：門司港燒咖哩 (伽哩本舖 或 Bear's Fruits)",
-            type: "food",
-            duration: "1 小時 15 分鐘",
-            desc: "濃郁焗烤起司配半熟蛋燒咖哩。「伽哩本舖」坐擁港灣海景，備有不辣帶果香甜味的「兒童咖哩套餐」。",
-            mapQuery: "伽哩本舗 門司港レトロ店"
-          },
-          {
-            time: "13:30",
-            title: "搭乘 JR 返回小倉 (車程約 15 分鐘)",
-            type: "train",
-            desc: "搭乘 JR 鹿兒島本線列車於 13:45 抵達 JR 小倉站。"
-          },
-          {
-            time: "14:00",
-            title: "景點 3：小倉城天守閣",
-            type: "sight",
-            duration: "1 小時 15 分鐘",
-            desc: "內部全設有無障礙電梯，推車可直達頂樓。有等比例發聲電動木馬、大名駕籠抬轎體驗與互動光影模型。",
-            mapQuery: "小倉城"
-          },
-          {
-            time: "15:15",
-            title: "景點 4：八坂神社 (小倉祇園八坂神社)",
-            type: "sight",
-            duration: "45 分鐘",
-            desc: "位於小倉城下同園區內。巨木參天、石板步道平坦，可帶幼童洗手淨水參拜祈求健康，收藏太鼓御守。",
-            mapQuery: "八坂神社 小倉"
-          },
-          {
-            time: "16:15",
-            title: "景點 5：魚町銀天街 ＆ 旦過市場散策",
-            type: "shop",
-            duration: "1.5 小時",
-            desc: "全日本第一條拱頂遮雨棚商店街，不怕天候影響。平整寬敞極好推推車，感受濃厚在地市集風情。",
-            mapQuery: "魚町銀天街"
-          },
-          {
-            time: "17:45",
-            title: "晚餐：資さんうどん 魚町店 (北九州靈魂美食)",
-            type: "food",
-            duration: "1 小時 15 分鐘",
-            desc: "24 小時營業。推薦招牌肉牛蒡天婦羅烏龍麵、黑輪燉牛筋白蘿蔔、牡丹餅。高湯甘醇，麵條軟嫩有兒童餐具，餵幼童最方便。",
-            mapQuery: "資さんうどん 魚町店"
-          },
-          {
-            time: "19:12",
-            title: "搭乘特急 Sonic 號返回博多",
-            type: "train",
-            duration: "19:12 發車 ➔ 19:59 抵達博多 (車程 47 分)",
-            desc: "車程舒適平穩，若昨日未買到布丁，出站可至 DEITOS 補買治一郎布丁。"
+            desc: "整理行囊，回味美好的由布院鐵道與自然之旅。"
           }
         ]
       },
@@ -898,6 +924,13 @@
         hotel: "GRAND BASE Hakataminami",
         items: [
           {
+            time: "07:30",
+            title: "起床整裝、早餐：[ 待補充 ]",
+            type: "food",
+            desc: "08:20 出門漫步至博多站新幹線月台。",
+            isCustomizable: true
+          },
+          {
             time: "08:49",
             title: "搭乘九州新幹線 (博多 ➔ 熊本)",
             type: "train",
@@ -909,7 +942,8 @@
             title: "景點 1：熊本城天守閣",
             type: "sight",
             duration: "2 小時",
-            desc: "重建後設有高架無障礙「特別見學通路」，推車一路暢行直達天守閣；內部設有無障礙電梯直通頂樓展望台。",
+            desc: "熊本站轉搭熊本市電至「熊本城·市役所前」下車步行約 15 分鐘。重建後設有高架無障礙「特別見學通路」，推車一路暢行直達天守閣；內部設有無障礙電梯直通頂樓。",
+            tips: "【無障礙亮點】不需走任何顛簸石子路或階梯，推車可直達天守閣門口，館內電梯可直上最高層俯瞰熊本市景。",
             mapQuery: "熊本城 天守閣"
           },
           {
@@ -922,7 +956,7 @@
           },
           {
             time: "12:20",
-            title: "午餐：勝烈亭 新市街本店 (米其林必比登推薦)",
+            title: "午餐：勝烈亭 新市街本店 (米其林必比登推薦・鹿兒島六白黑豚炸豬排)",
             type: "food",
             duration: "1 小時 15 分鐘",
             desc: "熊本殿堂級炸豬排！推薦「六白黑豚」厚切炸豬排，外酥內多汁；免費續加白飯與高麗菜絲，備有兒童餐椅與餐具，推車友善。",
@@ -939,7 +973,7 @@
           },
           {
             time: "15:10",
-            title: "景點 4：上通 / 下通商店街散策",
+            title: "景點 4：上通 / 下通商店街",
             type: "shop",
             duration: "1.5 小時",
             desc: "熊本最大寬敞拱廊街，平坦明亮無階梯，推車逛街極度輕鬆。",
@@ -966,6 +1000,12 @@
             type: "food",
             desc: "博多站周邊特色定食或居酒屋料理。",
             isCustomizable: true
+          },
+          {
+            time: "20:30",
+            title: "返回飯店休息",
+            type: "hotel",
+            desc: "回飯店整理行囊放鬆身心。"
           }
         ]
       },
@@ -983,16 +1023,23 @@
             time: "08:20",
             title: "早餐：景點 1：Dacomecca (炭火人氣麵包咖啡店)",
             type: "food",
-            duration: "1 小時",
-            desc: "現象級排隊名店！炭火香腸厚夾包、法式厚吐司與手沖咖啡。飯店步行約 8-10 分鐘即達。",
+            duration: "1 小時 (08:20 排隊候位入座享用早餐)",
+            desc: "現象級超人氣烘焙名店！炭火香腸堡、法式厚吐司與特色夾心麵包，內用可享用熱咖啡。飯店步行約 8-10 分鐘即達。",
             mapQuery: "DACOMECCA"
           },
           {
+            time: "09:25",
+            title: "搭乘 JR 列車前往海之中道",
+            type: "train",
+            duration: "博多 ➔ 香椎 ➔ 海之中道，車程約 40 分鐘",
+            desc: "搭乘 JR 鹿兒島本線轉香椎線直達海濱公園門口。"
+          },
+          {
             time: "10:15",
-            title: "景點 2：海之中道海濱公園 (動物森林與大草坪)",
+            title: "景點 2：海之中道海濱公園－動物森林與大草坪",
             type: "kids",
             duration: "2 小時",
-            desc: "JR 海之中道站直達。近距離觸摸水豚、袋鼠、紅鶴；軟質滑梯與充氣床，腹地寬廣適合奔跑放電。",
+            desc: "JR 海之中道站出站即達。近距離觸摸水豚、袋鼠、紅鶴；軟質滑梯與充氣床，腹地寬廣適合奔跑放電。",
             tips: "公園腹地大，可適度搭乘園內小火車節省推車體力。",
             mapQuery: "海の中道海浜公園"
           },
@@ -1006,10 +1053,16 @@
           },
           {
             time: "14:20",
-            title: "午餐：[ 待補充 ] (可於水族館海豚景觀餐廳享用)",
+            title: "午餐：[ 待補充 ] (可於水族館海豚景觀餐廳「Restaurant Reilly」享用)",
             type: "food",
             desc: "水族館「Restaurant Reilly」一邊看水底海豚一邊用餐。",
             isCustomizable: true
+          },
+          {
+            time: "15:10",
+            title: "搭 JR 返回博多站，轉搭直達西鐵巴士前往 LaLaport 福岡 (車程約 20 分鐘)",
+            type: "bus",
+            desc: "博多站前搭直達西鐵巴士直達 LaLaport。"
           },
           {
             time: "15:50",
@@ -1030,9 +1083,15 @@
           },
           {
             time: "18:20",
-            title: "晚餐：LaLaport 福岡 3F 美食街",
+            title: "晚餐：LaLaport 福岡 美食街 (3F 九州名店美食廣場)",
             type: "food",
             desc: "九州最大美食廣場，設有專用兒童餐椅、洗手台、哺乳室。用餐完搭計程車 (約 1,500 円) 直達飯店。"
+          },
+          {
+            time: "19:45",
+            title: "搭乘計程車直達返回飯店休息",
+            type: "taxi",
+            desc: "車程約 10-12 分鐘，車資約 1,500 日圓。"
           }
         ]
       },
@@ -1055,17 +1114,17 @@
           },
           {
             time: "09:45",
-            title: "景點 1：寶滿宮 竈門神社 (鬼滅聖地 ＆ 紅葉名所)",
+            title: "景點 1：寶滿宮 竈門神社 (鬼滅聖地 ＆ 11 月秋季紅葉名所)",
             type: "sight",
-            duration: "50 分鐘",
-            desc: "太宰府站搭排班計程車 (5-7分鐘，約1,000円) 直達社務所旁緩坡。片山正通設計的粉嫩現代社務所與家庭平安御守。避開山路階梯，推車順暢通行。",
+            duration: "50 分鐘 (09:45 - 10:35)",
+            desc: "太宰府站搭排班計程車 (5-7分鐘，約1,000-1,200円) 直達社務所旁緩坡。片山正通設計的粉嫩現代社務所與家庭平安御守。避開山路階梯，推車順暢通行。",
             mapQuery: "竈門神社"
           },
           {
             time: "10:45",
-            title: "景點 2：太宰府天滿宮 (由後往前順行參拜)",
+            title: "景點 2：太宰府天滿宮 (由後往前悠閒順行參拜)",
             type: "sight",
-            duration: "1 小時 15 分鐘",
+            duration: "1 小時 15 分鐘 (10:45 - 12:00)",
             desc: "計程車至天滿宮北側平地入口下車。穿過幽靜後園直達本殿參拜、觀賞藤本壯介設計的森林綠植「漂浮臨時本殿」；順走心字池摸神牛，完全不走回頭路！",
             mapQuery: "太宰府天満宮 本殿"
           },
@@ -1073,7 +1132,7 @@
             time: "12:00",
             title: "景點 3：太宰府表參道散策",
             type: "shop",
-            duration: "45 分鐘",
+            duration: "45 分鐘 (12:00 - 12:45)",
             desc: "隈研吾大師木條美學星巴克概念店、品嚐「かさの家」剛出爐的酥脆梅枝餅。",
             mapQuery: "スターバックスコーヒー 太宰府天満宮表参道店"
           },
@@ -1081,7 +1140,7 @@
             time: "12:45",
             title: "午餐：景點 4：一蘭拉麵 太宰府參道店 (合格拉麵)",
             type: "food",
-            duration: "1 小時",
+            duration: "1 小時 (12:45 - 13:45)",
             desc: "全日本唯一「五角形合格碗」概念店，59 公分特長麵條象徵長長久久。避開中午排隊高峰，備有兒童餐具。",
             mapQuery: "一蘭 太宰府参道店"
           },
@@ -1089,7 +1148,7 @@
             time: "14:40",
             title: "景點 5：mina 天神 (mina tenjin 複合式大型旗艦商場)",
             type: "shop",
-            duration: "2.5 小時",
+            duration: "2.5 小時 (14:40 - 17:10)",
             desc: "西鐵天神站地下直通。九州最大 UNIQLO 旗艦店、GU 旗艦店、Loft、JINS 與童裝生活雜貨，室內寬敞無階梯，推推車購物極佳。",
             mapQuery: "ミーナ天神"
           },
@@ -1097,7 +1156,7 @@
             time: "17:10",
             title: "天神地下街與周邊商圈 (Bic Camera 電器 / Full Full 天神店補買備案)",
             type: "shop",
-            duration: "1 小時 15 分鐘",
+            duration: "1 小時 15 分鐘 (17:10 - 18:25)",
             desc: "平整地下連通道避風遮雨，集中採購免稅藥妝與家電。",
             tips: "【明太子法包補買】若 Day 2 未買到，mina 出門步行 3 分鐘即為「The Full Full 天神店 (フルフル パンとワイン)」，現烤外脆內軟，絕佳補買機會！",
             mapQuery: "フルフル パンとワイン"
@@ -1108,6 +1167,12 @@
             type: "food",
             desc: "於天神商圈享用晚餐後返回飯店打包戰利品。",
             isCustomizable: true
+          },
+          {
+            time: "20:00",
+            title: "返回飯店休息，整理打包戰利品",
+            type: "hotel",
+            desc: "將購物戰利品分門別類打包收納。"
           }
         ]
       },
@@ -1131,7 +1196,7 @@
           },
           {
             time: "08:55",
-            title: "博多車站中央大廳 Coin Locker 集中寄放大件行李",
+            title: "博多車站中央大廳投幣置物櫃 (Coin Locker) 集中寄放大件行李",
             type: "walk",
             desc: "寄放大件行李與推車，從容出發展開上午市區行程。"
           },
@@ -1139,7 +1204,7 @@
             time: "09:10",
             title: "景點 1：住吉神社 (博多晨間清幽參拜)",
             type: "sight",
-            duration: "40 分鐘",
+            duration: "40 分鐘 (09:10 - 09:50)",
             desc: "日本三大住吉神社之一，古樹參天、環境幽靜，平緩石板步道好推車。摸觸「古代力士像」祈求力量與健康。",
             mapQuery: "住吉神社 福岡"
           },
@@ -1168,7 +1233,7 @@
             time: "11:30",
             title: "景點 3：博多站商圈最後巡禮 (AMU PLAZA / 博多阪急)",
             type: "shop",
-            duration: "1 小時",
+            duration: "1 小時 (11:30 - 12:30)",
             desc: "車站共構商場室內推車無阻，集中採購長崎蛋糕福砂屋、明太子仙貝等常溫名產。",
             mapQuery: "博多阪急"
           },
@@ -1181,7 +1246,7 @@
           },
           {
             time: "14:00",
-            title: "午後站內咖啡時光 ＆ 幼童推車小憩",
+            title: "午後休憩與咖啡時光 ＆ 幼童推車小憩",
             type: "coffee",
             desc: "在博多站咖啡廳小歇，讓 2 歲幼童在推車上安穩午睡充電。"
           },
@@ -1197,7 +1262,7 @@
             time: "17:00",
             title: "景點 4：福岡機場國際線航廈報到與免稅店採買",
             type: "flight",
-            duration: "停留 2.5 小時",
+            duration: "停留 2.5 小時 (17:00 - 19:30)",
             desc: "中華航空櫃檯託運 (CI117 20:35 起飛；安全帽外箱可貼易碎貼紙託運或手提)。提前出關採買 Royce、獺祭等伴手禮。",
             mapQuery: "福岡空港 国際線旅客ターミナル"
           },
@@ -1222,8 +1287,8 @@
     const checklistItems = [
       { id: "c1", text: "護照 4 本（效期確認大於 6 個月）" },
       { id: "c2", text: "Visit Japan Web 申報 QR Code 存離線相簿" },
-      { id: "c3", text: "JR 北九州 3 日券電子憑證 (MCO)" },
-      { id: "c4", text: "由布院之森車票 ＆ COMICO 美術館 14:00 預約憑證" },
+      { id: "c3", text: "JR 北九州 3 日券電子憑證 (MCO，11/16-11/18)" },
+      { id: "c4", text: "由布院之森車票 (10/18 搶票) ＆ 特色便當預約確認" },
       { id: "c5", text: "SHOEI Gallery 11/21 10:00 預約確認" },
       { id: "c6", text: "輕便折疊嬰兒推車 + 專用防風防雨罩" },
       { id: "c7", text: "幼童隨身藥品（退燒藥水、止瀉、感冒藥、防蚊液）" },
@@ -1242,33 +1307,32 @@
     // Return appropriate icons for category
     function getTypeIcon(type) {
       switch(type) {
-        case 'flight': return '<i class="fa-solid fa-plane-departure text-sky-500"></i>';
-        case 'train': return '<i class="fa-solid fa-train text-emerald-600"></i>';
-        case 'subway': return '<i class="fa-solid fa-train-subway text-indigo-500"></i>';
-        case 'bus': return '<i class="fa-solid fa-bus text-amber-600"></i>';
-        case 'food': return '<i class="fa-solid fa-utensils text-rose-500"></i>';
-        case 'sight': return '<i class="fa-solid fa-torii-gate text-red-500"></i>';
-        case 'kids': return '<i class="fa-solid fa-baby-carriage text-purple-500"></i>';
-        case 'shop': return '<i class="fa-solid fa-bag-shopping text-pink-500"></i>';
-        case 'hotel': return '<i class="fa-solid fa-hotel text-amber-500"></i>';
-        case 'walk': return '<i class="fa-solid fa-person-walking text-slate-500"></i>';
-        case 'taxi': return '<i class="fa-solid fa-taxi text-yellow-500"></i>';
-        case 'ticket': return '<i class="fa-solid fa-ticket text-emerald-500"></i>';
-        case 'coffee': return '<i class="fa-solid fa-mug-saucer text-amber-700"></i>';
-        default: return '<i class="fa-solid fa-location-dot text-slate-500"></i>';
+        case 'flight': return '<i class="fa-solid fa-plane-departure text-sky-500 text-lg"></i>';
+        case 'train': return '<i class="fa-solid fa-train text-emerald-600 text-lg"></i>';
+        case 'subway': return '<i class="fa-solid fa-train-subway text-indigo-500 text-lg"></i>';
+        case 'bus': return '<i class="fa-solid fa-bus text-amber-600 text-lg"></i>';
+        case 'food': return '<i class="fa-solid fa-utensils text-rose-500 text-lg"></i>';
+        case 'sight': return '<i class="fa-solid fa-torii-gate text-red-500 text-lg"></i>';
+        case 'kids': return '<i class="fa-solid fa-baby-carriage text-purple-500 text-lg"></i>';
+        case 'shop': return '<i class="fa-solid fa-bag-shopping text-pink-500 text-lg"></i>';
+        case 'hotel': return '<i class="fa-solid fa-hotel text-amber-500 text-lg"></i>';
+        case 'walk': return '<i class="fa-solid fa-person-walking text-slate-500 text-lg"></i>';
+        case 'taxi': return '<i class="fa-solid fa-taxi text-yellow-500 text-lg"></i>';
+        case 'ticket': return '<i class="fa-solid fa-ticket text-emerald-500 text-lg"></i>';
+        case 'coffee': return '<i class="fa-solid fa-mug-saucer text-amber-700 text-lg"></i>';
+        default: return '<i class="fa-solid fa-location-dot text-slate-500 text-lg"></i>';
       }
     }
 
-    // Select Day function
     function selectDay(dayNum) {
       currentDay = dayNum;
 
       // Update Nav Buttons styling with unified design
       document.querySelectorAll('.day-tab').forEach((tab, index) => {
         if (index + 1 === dayNum) {
-          tab.className = 'day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold tab-active transition whitespace-nowrap';
+          tab.className = 'day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold tab-active transition whitespace-nowrap';
         } else {
-          tab.className = 'day-tab flex-shrink-0 px-3 py-1.5 rounded-xl text-xs font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap';
+          tab.className = 'day-tab flex-shrink-0 px-3.5 py-2 rounded-xl text-sm font-bold text-slate-600 bg-slate-100 hover:bg-slate-200 transition whitespace-nowrap';
         }
       });
 
@@ -1280,27 +1344,27 @@
       summaryCard.innerHTML = `
         <div class="flex items-start justify-between">
           <div>
-            <div class="inline-flex items-center space-x-2">
-              <span class="text-xs font-bold px-2.5 py-0.5 rounded-full ${day.badgeColor}">${day.badge}</span>
-              <span class="text-xs text-slate-500 font-medium">${day.date}</span>
+            <div class="inline-flex items-center space-x-2.5">
+              <span class="text-xs sm:text-sm font-bold px-3 py-0.5 rounded-full ${day.badgeColor}">${day.badge}</span>
+              <span class="text-xs sm:text-sm text-slate-500 font-semibold">${day.date}</span>
             </div>
-            <h2 class="text-base sm:text-lg font-bold text-slate-800 mt-1">${day.title}</h2>
-            <p class="text-xs text-slate-500 mt-0.5">${day.subtitle}</p>
+            <h2 class="text-lg sm:text-xl font-bold text-slate-900 mt-2 leading-snug">${day.title}</h2>
+            <p class="text-sm text-slate-600 mt-1">${day.subtitle}</p>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-3 pt-3 border-t border-slate-100 text-xs">
-          <div class="flex items-start space-x-2 text-slate-600">
-            <i class="fa-solid fa-route text-rose-500 mt-0.5 flex-shrink-0"></i>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-4 pt-3.5 border-t border-slate-200/80 text-sm">
+          <div class="flex items-start space-x-2 text-slate-700">
+            <i class="fa-solid fa-route text-rose-500 mt-1 flex-shrink-0"></i>
             <div>
-              <span class="font-bold text-slate-700">主要交通：</span>
+              <span class="font-bold text-slate-900">主要交通：</span>
               <span>${day.transportSummary}</span>
             </div>
           </div>
-          <div class="flex items-start space-x-2 text-slate-600">
-            <i class="fa-solid fa-coins text-amber-500 mt-0.5 flex-shrink-0"></i>
+          <div class="flex items-start space-x-2 text-slate-700">
+            <i class="fa-solid fa-coins text-amber-500 mt-1 flex-shrink-0"></i>
             <div>
-              <span class="font-bold text-slate-700">當日預算：</span>
+              <span class="font-bold text-slate-900">當日預算：</span>
               <span>${day.budget}</span>
             </div>
           </div>
@@ -1311,31 +1375,31 @@
       const container = document.getElementById('timelineContainer');
       container.innerHTML = '';
 
-      day.items.forEach((item, idx) => {
+      day.items.forEach((item) => {
         const itemDiv = document.createElement('div');
-        itemDiv.className = 'timeline-item flex items-start space-x-3 group relative';
+        itemDiv.className = 'timeline-item flex items-start space-x-3.5 group relative';
 
         const mapBtn = item.mapQuery ? `
-          <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapQuery)}" target="_blank" rel="noopener noreferrer" class="mt-2.5 inline-flex items-center space-x-1 text-[11px] font-semibold text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 px-2.5 py-1 rounded-lg transition active:scale-95">
-            <i class="fa-solid fa-location-arrow text-[10px]"></i>
+          <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.mapQuery)}" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center space-x-1.5 text-xs sm:text-sm font-semibold text-rose-600 hover:text-rose-700 bg-rose-50 hover:bg-rose-100 px-3 py-1.5 rounded-xl transition active:scale-95 border border-rose-200/70 shadow-xs">
+            <i class="fa-solid fa-location-arrow text-xs"></i>
             <span>Google 地圖導航</span>
           </a>
         ` : '';
 
         const tipsBox = item.tips ? `
-          <div class="mt-2 p-2.5 bg-amber-50/90 border border-amber-200/80 rounded-xl text-[11px] text-amber-950 flex items-start space-x-2">
-            <i class="fa-solid fa-lightbulb text-amber-600 mt-0.5 flex-shrink-0 text-xs"></i>
+          <div class="mt-2.5 p-3 bg-amber-50/90 border border-amber-200/80 rounded-xl text-xs sm:text-sm text-amber-950 flex items-start space-x-2.5 leading-relaxed">
+            <i class="fa-solid fa-lightbulb text-amber-600 mt-0.5 flex-shrink-0 text-sm"></i>
             <span class="leading-relaxed">${item.tips}</span>
           </div>
         ` : '';
 
         const durationBadge = item.duration ? `
-          <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded-full">${item.duration}</span>
+          <span class="text-xs bg-slate-100 text-slate-700 font-semibold px-2.5 py-0.5 rounded-full">${item.duration}</span>
         ` : '';
 
         const customTag = item.isCustomizable ? `
-          <span class="text-[10px] bg-rose-100 text-rose-700 font-semibold px-2 py-0.5 rounded-full flex items-center space-x-1">
-            <i class="fa-solid fa-pen-to-square text-[9px]"></i>
+          <span class="text-xs bg-rose-100 text-rose-700 font-bold px-2.5 py-0.5 rounded-full flex items-center space-x-1">
+            <i class="fa-solid fa-pen-to-square text-[11px]"></i>
             <span>可自訂填寫</span>
           </span>
         ` : '';
@@ -1343,23 +1407,23 @@
         itemDiv.innerHTML = `
           <!-- Timeline Indicator & Icon -->
           <div class="timeline-dot relative z-10 flex flex-col items-center">
-            <div class="w-8 h-8 rounded-xl bg-white border-2 border-slate-200 group-hover:border-rose-400 flex items-center justify-center shadow-xs transition">
+            <div class="w-10 h-10 rounded-2xl bg-white border-2 border-slate-200 group-hover:border-rose-400 flex items-center justify-center shadow-xs transition">
               ${getTypeIcon(item.type)}
             </div>
           </div>
 
           <!-- Event Content Card -->
-          <div class="flex-1 bg-white rounded-2xl p-3.5 border border-slate-200 shadow-xs mb-3 hover:shadow-md transition">
-            <div class="flex items-center justify-between flex-wrap gap-1">
-              <span class="text-xs font-bold font-outfit text-brand-600 tracking-wide">${item.time}</span>
-              <div class="flex items-center space-x-1.5">
+          <div class="flex-1 bg-white rounded-2xl p-4 border border-slate-200 shadow-xs mb-3.5 hover:shadow-md transition">
+            <div class="flex items-center justify-between flex-wrap gap-1.5">
+              <span class="text-sm font-bold font-outfit text-brand-600 tracking-wide">${item.time}</span>
+              <div class="flex items-center space-x-2">
                 ${customTag}
                 ${durationBadge}
               </div>
             </div>
             
-            <h3 class="text-sm font-bold text-slate-800 mt-1 leading-snug">${item.title}</h3>
-            <p class="text-xs text-slate-600 mt-1 leading-relaxed">${item.desc}</p>
+            <h3 class="text-base font-bold text-slate-900 mt-1.5 leading-snug">${item.title}</h3>
+            <p class="text-sm text-slate-700 mt-1.5 leading-relaxed">${item.desc}</p>
             ${tipsBox}
             ${mapBtn}
           </div>
@@ -1372,7 +1436,6 @@
       userNoteInput.value = savedNotes[dayNum] || '';
     }
 
-    // Save Daily Note Handler
     function saveDailyNote() {
       const text = document.getElementById('dailyUserNote').value;
       savedNotes[currentDay] = text;
@@ -1396,9 +1459,9 @@
       const navPrep = document.getElementById('navTabPrep');
       const navHighlights = document.getElementById('navTabHighlights');
       
-      navItinerary.className = "flex flex-col items-center justify-center py-1 text-slate-400 font-medium transition hover:text-slate-700";
-      navPrep.className = "flex flex-col items-center justify-center py-1 text-slate-400 font-medium transition hover:text-slate-700";
-      navHighlights.className = "flex flex-col items-center justify-center py-1 text-slate-400 font-medium transition hover:text-slate-700";
+      navItinerary.className = "flex flex-col items-center justify-center py-1 text-slate-400 font-semibold transition hover:text-slate-700";
+      navPrep.className = "flex flex-col items-center justify-center py-1 text-slate-400 font-semibold transition hover:text-slate-700";
+      navHighlights.className = "flex flex-col items-center justify-center py-1 text-slate-400 font-semibold transition hover:text-slate-700";
 
       if (tabKey === 'itinerary') {
         document.getElementById('sectionItinerary').classList.remove('hidden');
@@ -1461,10 +1524,10 @@
       checklistItems.forEach(item => {
         const isChecked = packedStatus[item.id] || false;
         const itemEl = document.createElement('label');
-        itemEl.className = 'flex items-center space-x-2.5 p-2.5 bg-slate-50 hover:bg-slate-100 rounded-xl cursor-pointer select-none transition border border-slate-200/70';
+        itemEl.className = 'flex items-center space-x-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl cursor-pointer select-none transition border border-slate-200/80';
         itemEl.innerHTML = `
-          <input type="checkbox" id="${item.id}" ${isChecked ? 'checked' : ''} onchange="toggleCheck('${item.id}')" class="w-4 h-4 rounded text-brand-600 focus:ring-brand-500 border-slate-300">
-          <span class="text-xs text-slate-700 ${isChecked ? 'line-through text-slate-400' : ''}">${item.text}</span>
+          <input type="checkbox" id="${item.id}" ${isChecked ? 'checked' : ''} onchange="toggleCheck('${item.id}')" class="w-5 h-5 rounded text-brand-600 focus:ring-brand-500 border-slate-300">
+          <span class="text-sm font-medium text-slate-800 ${isChecked ? 'line-through text-slate-400' : ''}">${item.text}</span>
         `;
         container.appendChild(itemEl);
       });
